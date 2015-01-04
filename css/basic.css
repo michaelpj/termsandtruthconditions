@@ -1,5 +1,5 @@
 body {
-    font-family: "Source Sans Pro", "Calibri", "Helvetica", sans-serif;
+    font-family: "Sorts Mill Goudy", "Calibri", "Helvetica", sans-serif;
     font-weight: 300;
     font-size: 1.4em;
     line-height: 1.6em;
@@ -8,10 +8,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Gentium Basic", serif;
+    font-family: "Lato", sans-serif;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: .1em;
 }
 
 a, a#selected {
@@ -46,7 +45,6 @@ nav li {
 }
 
 h1 a, h2 a {
-    font-size: 1.2em;
     line-height: 1.4em;
 }
 
