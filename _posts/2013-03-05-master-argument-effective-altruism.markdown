@@ -10,7 +10,7 @@ categories: [philosophy, effective altruism]
 
 I was putting together some readings about effective altruism, and I realised that the resources I'd picked out nicely mirror and support the stages of a prototypical argument for effective altruism.
 
-<!--more-->
+<!-- more -->
 
 ## The argument ##
 

@@ -8,6 +8,8 @@ categories: Australia
 
 Once again, it's been far too long since I updated this, but better late than never!
 
+<!-- more -->
+
 I'm just about coming to the end of my time at Atlassian, which means it's time to do a bit of travelling! I've actually organized everything (finally!), so my itinerary looks a bit like this:
 
 - Melbourne for four days.
@@ -15,8 +17,6 @@ I'm just about coming to the end of my time at Atlassian, which means it's time 
 - Cairns for a week, doing a five-day diving course on the reef that will get me qualified to dive anywhere.
 - Alice Springs for four days, during which time I'm going to do a three-day trek out to Uluru and back.
 - Then back to Sydney!
-
-<!-- more -->
 
 Which is all looking pretty awesome, but find the experience of spending that much money all at once a bit traumatic...
 
