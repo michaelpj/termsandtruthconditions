@@ -1,0 +1,7 @@
+<header>
+  <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+  <p>
+    {% if page.author %}{{ page.author }} • {% endif %}
+    {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
+    {% if page.tags != empty %} • {{ page.tags | join: ', ' }}{% endif %}</p>
+</header>
