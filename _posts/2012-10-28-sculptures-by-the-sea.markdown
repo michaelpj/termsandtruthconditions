@@ -3,7 +3,7 @@ layout: post
 title: "Sculptures by the Sea"
 date: 2012-10-28 23:36
 comments: true
-categories: Australia
+tags: Australia
 ---
 
 Around this time of year in Sydney they run a huge sculpture exhibition from Tamarara bay around the headland to Bondi beach. We had a work barbeque and expedition to see the sculptures, which were pretty awesome!

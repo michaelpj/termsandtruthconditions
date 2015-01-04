@@ -3,7 +3,7 @@ layout: post
 title: "Using the Free Monad to Avoid Stack Overflows in Scala"
 date: 2013-03-16 13:10
 comments: true
-categories: [Scala, programming] 
+tags: [Scala, programming] 
 ---
 
 _The code for this post can be downloaded [here](https://github.com/michaelpj/free-monad)._

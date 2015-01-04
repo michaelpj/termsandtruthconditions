@@ -3,7 +3,7 @@ layout: post
 title: "Slides for Variance talk"
 date: 2013-03-06 23:30
 comments: true
-categories: [scala, computer science, category theory]
+tags: [scala, computer science, category theory]
 ---
 
 I gave my [post](/blog/2012/12/29/covariance-and-contravariance-in-scala/) as a talk at the recent [ScalaSyd](http://www.meetup.com/scalasyd/), and you can get the slides [here](/downloads/pdf/covariance-talk.pdf).

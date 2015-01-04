@@ -3,7 +3,7 @@ layout: post
 title: "The Master Argument for Effective Altruism"
 date: 2013-03-05 23:16
 comments: true
-categories: [philosophy, effective altruism] 
+tags: [philosophy, effective altruism] 
 ---
 
 [_epistemic status_: mostly believed, high confidence]

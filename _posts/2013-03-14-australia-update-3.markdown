@@ -3,7 +3,7 @@ layout: post
 title: "Australia Update 3"
 date: 2013-03-14 22:32
 comments: true
-categories: Australia
+tags: Australia
 ---
 
 Once again, it's been far too long since I updated this, but better late than never!

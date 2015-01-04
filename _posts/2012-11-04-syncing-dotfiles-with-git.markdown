@@ -3,7 +3,7 @@ layout: post
 title: "Syncing Dotfiles with Git"
 date: 2012-11-04 18:20
 comments: true
-categories: [programming, git]
+tags: [programming, git]
 ---
 
 So I've been using [Vim](http://www.vim.org/) recently for text editing and coding. I'll write a post someday about why, but what really sucked me over from using [Emacs](http://www.gnu.org/software/emacs/) was the awesome way that you can naturally build up commands with a kind of "verb-object" form.

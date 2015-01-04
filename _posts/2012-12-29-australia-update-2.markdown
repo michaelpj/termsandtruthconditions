@@ -3,7 +3,7 @@ layout: post
 title: "Australia Update 2"
 date: 2012-12-29 15:09
 comments: true
-categories: Australia 
+tags: Australia 
 ---
 
 Firstly, Merry Christmas and a Happy New Year from Sydney!

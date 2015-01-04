@@ -3,7 +3,7 @@ layout: post
 title: "Covariance and Contravariance in Scala"
 date: 2012-12-29 15:54
 comments: true
-categories: [programming, Scala, category theory]
+tags: [programming, Scala, category theory]
 ---
 
 I spent some time trying to figure out co- and contra-variance in Scala, and it turns out to be both interesting enough to be worth blogging about, and subtle enough that doing so will test my understanding!
@@ -24,7 +24,7 @@ And you've probably heard that the ```+A``` means that ```A``` is a "covariant t
 The first thing that's going on there is that ```List``` is a "generic" type. That is, you can have lots of ```List``` types. You can have ```List[Int]```, and ```List[MyClass]``` or whatever. To put this in another way, ```List[_]``` is a _type constructor_; it's like a function that takes another concrete type and produces a new one. So if you already have a type ```X```, you can use the ```List``` type constructor to make a new type, ```List[X]```.
 
 ## A little bit of category theory ##
-To get the cool stuff in all its generality, we're going to need to start thinking about things in terms of categories. Fortunately, it's pretty non-scary categories stuff. Recall that a [category](http://en.wikipedia.org/wiki/Category_%28mathematics%29) \\(\mathcal{C}\\) is just some objects and some arrows (which we usually gloss as "functions"). Arrows go from one object to another, and the only requirements for being a category are that you have some binary operation on arrows (usually glossed as "composition"), that makes new arrows that go from and to the right places; and that you have an "identity" arrow on every object that does just what you'd expect.[^categorylaws] The category we're mostly interested in is the category of _types_: types like ```Int```, ```Person```, ```Map[Foo, Bar]``` are the objects, and arrows are precisely functions.
+To get the cool stuff in all its generality, we're going to need to start thinking about things in terms of tags. Fortunately, it's pretty non-scary tags stuff. Recall that a [category](http://en.wikipedia.org/wiki/Category_%28mathematics%29) \\(\mathcal{C}\\) is just some objects and some arrows (which we usually gloss as "functions"). Arrows go from one object to another, and the only requirements for being a category are that you have some binary operation on arrows (usually glossed as "composition"), that makes new arrows that go from and to the right places; and that you have an "identity" arrow on every object that does just what you'd expect.[^categorylaws] The category we're mostly interested in is the category of _types_: types like ```Int```, ```Person```, ```Map[Foo, Bar]``` are the objects, and arrows are precisely functions.
 
 [^categorylaws]: In full, the requirements are:
 
@@ -34,7 +34,7 @@ To get the cool stuff in all its generality, we're going to need to start thinki
 
     A binary operation \\(\circ : Hom(A, B) \times Hom(B, C) \rightarrow Hom(A, C)\\) which is associative and has the identity morphism as its identity.
 
-The other concept we're going to need is that of a [functor](http://en.wikipedia.org/wiki/Functor). A functor \\(F : \mathcal{C} \rightarrow \mathcal{D}\\) is a mapping _between_ categories. However, there's no reason you can't have functors from categories to themselves (helpfully called "endofunctors"), and those are the ones we're going to be interested in. Functors have to turn objects in the source category into objects in the target category, and they also have to turn arrows into new arrows. Again, functors have to obey certain laws, but don't worry too much about that.[^functorlaws]
+The other concept we're going to need is that of a [functor](http://en.wikipedia.org/wiki/Functor). A functor \\(F : \mathcal{C} \rightarrow \mathcal{D}\\) is a mapping _between_ tags. However, there's no reason you can't have functors from tags to themselves (helpfully called "endofunctors"), and those are the ones we're going to be interested in. Functors have to turn objects in the source category into objects in the target category, and they also have to turn arrows into new arrows. Again, functors have to obey certain laws, but don't worry too much about that.[^functorlaws]
 
 [^functorlaws]: These are:
 
@@ -46,7 +46,7 @@ Okay, so who cares about functors? The answer is that type constructors are basi
 
 [^map]: The astute reader will have noticed that not all type constructors come with a map function. This does indeed mean that not all type constructors are functors. But pretend that they are for now.
 
-One final concept and then I promise this will start to get relevant. Some mappings between categories look a lot like functors, except that they reverse the direction of arrows. So instead of getting \\(F(f): FX \rightarrow FY\\), you get \\(F(f): FY \rightarrow FX\\). So these got a special name, they're called _contravariant_ functors. To distiguish them, normal functors are called _covariant_ functors.
+One final concept and then I promise this will start to get relevant. Some mappings between tags look a lot like functors, except that they reverse the direction of arrows. So instead of getting \\(F(f): FX \rightarrow FY\\), you get \\(F(f): FY \rightarrow FX\\). So these got a special name, they're called _contravariant_ functors. To distiguish them, normal functors are called _covariant_ functors.
 
 Look at that, there are those funny words again. But what on _earth_ do contravariant functors have to do with Scala?
 

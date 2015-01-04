@@ -3,7 +3,7 @@ layout: post
 title: "Estimating the Effectiveness of DCP - 1"
 date: 2012-11-01 19:27
 comments: true
-categories: [effective altruism] 
+tags: [effective altruism] 
 ---
 
 *[This is the first of two posts I wrote on estimating the cost-effectiveness of the DCP organization, who themselves publish excellent reports on the cost-effectiveness of health interventions. It was originally published on the [Giving What We Can blog](http://www.givingwhatwecan.org/blog/2012-10-27/estimating-the-effectiveness-of-dcp).]*
