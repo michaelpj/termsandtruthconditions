@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% for page in site.posts %}
+{% for page in paginator.posts %}
 <article>
   <header>
     <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
@@ -11,7 +11,16 @@ layout: default
     {{ page.excerpt }}
   </div>
   <footer>
-    <a href="{{ page.url | prepend: site.baseurl }}">{{ site.more }}</a>
+    <a href="{{ page.url | prepend: site.baseurl }}" class="more box">{{ site.more }}</a>
   </footer>
 </article>
 {% endfor %}
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer box">Newer</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older box">Older</a>
+  {% endif %}
+</div>

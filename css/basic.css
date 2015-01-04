@@ -78,14 +78,14 @@ article footer {
     margin-top: 1.5em;
 }
 
-article footer a {
+.box {
     border: 1px solid black;
     border-radius: 3px;
     padding: .3em .6em;
     transition: background-color .2s ease-out;
 }
 
-article footer a:hover {
+.box:hover {
     background-color: black;
     color: white;
 }
@@ -108,14 +108,41 @@ body > footer .fa-copyright {
     margin-right: .5em;
 }
 
-article footer a::after {
+.more::after {
     font-family: "FontAwesome";
     font-size: .8em;
     margin-left: .4em;
     content: "\f101";
 }
 
-/**
+/*
+ * Pagination
+ */
+
+.older::after {
+    font-family: "FontAwesome";
+    font-size: .8em;
+    margin-left: .4em;
+    content: "\f101";
+}
+
+.newer::before {
+    font-family: "FontAwesome";
+    font-size: .8em;
+    margin-right: .4em;
+    content: "\f100";
+}
+
+div.pagination a {
+    color: inherit;
+}
+
+div.pagination {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+/*
  * Images
  */
 img {

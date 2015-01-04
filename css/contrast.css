@@ -8,7 +8,7 @@ body > * {
     padding-right: calc(13% - 1.6em);
 }
 
-article {
+div.content {
     background: white;
     border-top: 1px solid gainsboro;
 }
