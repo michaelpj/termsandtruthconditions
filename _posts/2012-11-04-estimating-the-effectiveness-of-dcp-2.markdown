@@ -52,7 +52,11 @@ At this point we're going to do something very similar to what we did last time:
 
 [In the script this looks a bit different as we're working with logarithms, but the idea is the same.]
 
-Remember \\(\rho\\)? We're not actually sure what the right value for \\(\rho\\) is, but what we can do to start with is to plot how our estimate varies with \\(\rho\\). {% img center /images/gwwc-dcp/estimates-by-error.png %} The red line is our estimate for the (non-logarithm'd) effectiveness of donating to DCP, and the x-axis is what we've been calling \\(\rho\\).[^monotonic] The green line shows the average true effectiveness of the intervention that appears to be best (when we add in the error), that is, how good it is to donate to DCP's most recommended intervention, rather than DCP itself. On this scale, that line is almost invisible! Unsurprisingly, as the amount of variance due to error goes to 100%, not only does donating to DCP become worthless, but our estimation of how good their current recommendations are drops to almost nothing (not that you can see that here). However, until the amount of error becomes excessive, it is still significantly better to donate to DCP than to their most recommended intervention.
+Remember \\(\rho\\)? We're not actually sure what the right value for \\(\rho\\) is, but what we can do to start with is to plot how our estimate varies with \\(\rho\\). 
+
+{% img center /images/gwwc-dcp/estimates-by-error.png %} 
+
+The red line is our estimate for the (non-logarithm'd) effectiveness of donating to DCP, and the x-axis is what we've been calling \\(\rho\\).[^monotonic] The green line shows the average true effectiveness of the intervention that appears to be best (when we add in the error), that is, how good it is to donate to DCP's most recommended intervention, rather than DCP itself. On this scale, that line is almost invisible! Unsurprisingly, as the amount of variance due to error goes to 100%, not only does donating to DCP become worthless, but our estimation of how good their current recommendations are drops to almost nothing (not that you can see that here). However, until the amount of error becomes excessive, it is still significantly better to donate to DCP than to their most recommended intervention.
 
 [^monotonic]: The red line should, *a priori*, be decreasing monotonically. However, what I'm plotting is the result of my *simulation*, so there's some jitter in the readings.
 
