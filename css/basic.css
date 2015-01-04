@@ -1,16 +1,14 @@
 body {
     font-family: "Sorts Mill Goudy", "Calibri", "Helvetica", sans-serif;
     font-weight: 300;
-    font-size: 1.4em;
-    line-height: 1.6em;
+    font-size: 1.3em;
+    line-height: 1.5em;
     margin: 0;
-    font-size: calc(.6vmax + .8em);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Lato", sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
-    text-transform: uppercase;
 }
 
 a, a#selected {
