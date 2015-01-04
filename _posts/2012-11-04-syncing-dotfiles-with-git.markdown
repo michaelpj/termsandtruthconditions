@@ -18,7 +18,7 @@ So naturally, when I fired up Vim at work and started writing, the first thing I
     :WQ
     ::asd;lfsgihaspoihtasdophif
 
-{% img center /images/rageface.png %}
+{% img center /blog/images/rageface.png %}
 
 Suddenly, muscle memory is no longer your friend.
 

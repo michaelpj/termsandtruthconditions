@@ -8,7 +8,7 @@ categories: Australia
 
 Today was my first day at Atlassian!
 
-{% img /images/welcome-pack.jpg This was on my desk when I arrived... yes that is a Nerf gun! %}
+{% img /blog/images/welcome-pack.jpg This was on my desk when I arrived... yes that is a Nerf gun! %}
 
 <!-- more -->
 Having managed to locate their offices, which they've cunningly relocated (to [here][gmaps]) as of a few weeks ago, I successfully made it into work. 

@@ -26,17 +26,17 @@ Firstly, we need to know something about the distribution of the interventions i
 
 Back to our health interventions. Fortunately, we have a lot of data from DCP about the cost-effectiveness of interventions: if we plot the effectiveness of the interventions they assessed in the DCP2 report, we get a distribution that looks a bit like this: 
 
-{% img center /images/gwwc-dcp/interventions-distribution.png %}
+{% img center /blog/images/gwwc-dcp/interventions-distribution.png %}
 
 That's definitely not a normal distribution, but it *is* a "log-normal" distribution. A log-normal distribution is fairly straightforward: if you take the logarithms of all the possibilities along the bottom, and then plot the distribution, you should get a normal distribution. And if we do that for the DCP data, then we do indeed get a very plausible-looking bell-curve. 
 
-{% img center /images/gwwc-dcp/interventions-distribution-log.png %} 
+{% img center /blog/images/gwwc-dcp/interventions-distribution-log.png %} 
 
 Now, this makes it looks pretty plausible that the DCP data really does follow a (log-)normal distribution, and it'll be helpful if we can work out the two parameters for it that I mentioned above. For the moment, let's assume that taking the mean and standard deviation of the logarithms of the data gives us the right parameters - we can be more sophisticated (in particular we're going to want to think about the possibility of error), but I'll leave that for a later post.
 
 Having the parameters for the distribution means that we can get R to make up entirely new data points *as if* they came from the original data set. And if the actual data really is distributed in the way we think it is, then this is a lot like DCP finding and assessing a new random intervention. We can then do the rest of our model process - check whether it's a better charity than we had before, and if so work out what the difference is - and get an answer for how much difference that one attempt would make. We can then use R to simulate doing this a large number of times, and then simply average the results! Thus: we generate a large number of samples, to represent a large number of investigations by DCP. We can then work out the difference in effectiveness between each "new" intervention and the current best option. The current best option is better than average, so we'll expect the difference in general to be negative. We can regard all those results as 0, however, as in that case there would (in our model) be no change in where the money goes. 
 
-{% img center /images/gwwc-dcp/gains-distribution.png %} 
+{% img center /blog/images/gwwc-dcp/gains-distribution.png %} 
 
 (Looking at the graph we get, the improvements also appear to be also log-normally distributed). Finally, we can then average these results. Call that average A.   
 
