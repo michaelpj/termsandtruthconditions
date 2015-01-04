@@ -123,16 +123,26 @@ img {
     vertical-align: middle;
 }
 
-img.center {
+.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-img.right {
-    float: right
+.right {
+    float: right;
+    margin-left: 1.5em;
 }
 
-img.left {
-    float: left
+.left {
+    float: left;
+    margin-right: 1.5em;
+}
+
+iframe.beeminder {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 185px;
+    width: 230px;
 }
