@@ -38,7 +38,7 @@ The other concept we're going to need is that of a [functor](http://en.wikipedia
 
 [^functorlaws]: These are:
 
-    \\(F(id_X) = id_{FX}\\)
+    \\(F(id_{X}) = id_{FX}\\)
 
     \\(F(f \circ g) = F(f) \circ F(g)\\)
 
@@ -67,7 +67,7 @@ There's one final possibility. Since subtyping is a partial order, we can have t
 
 And that, fundamentally, is it. That's what those little +s and -s on type paramters mean. You can go home now.
 
-``` scala Covariance and contravariance in action
+``` scala
 class GParent
 class Parent extends GParent
 class Child extends Parent
@@ -84,9 +84,9 @@ bar(new Box2[Child])    // type error
 bar(new Box2[GParent])  // success
 ```
 
-## But what about those cryptic errors? ##
+## But what about those cryptic errors?
 
-``` scala A cryptic error
+``` scala 
 class Box[+A] {
     def set(x : A) : Box[A]
 }
@@ -107,7 +107,7 @@ Whoa. That's pretty strange. Not only does it have two type parameters, one of t
 We have ```Function1[A,B]```, which is a _type_ of one-parameter functions that go from type ```A``` to type ```B```. It can therefore be a sub- or super-type of other (function) types. For example, 
 
 ``` scala
-    Function1[GParent, Child] <: Function1[Parent, Parent]
+Function1[GParent, Child] <: Function1[Parent, Parent]
 ```
 
 How do I know this? Because of the variance annotations on ```Function1```. The first parameter is contravariant, so can vary upwards, and the second parameter is covariant, so can vary downwards.
@@ -142,7 +142,7 @@ So we can now see why we got that cryptic compile error. We declared that ```A``
 
 As an aside, this is why it's an absolutely terrible idea that Java's arrays are covariant. That means that you can write code like the following:
 
-``` java Unsound covariant arrays
+``` java 
 Integer[] ints = [1,2]
 Object[] objs = ints
 objs[0] = "I'm an integer!"
@@ -152,7 +152,7 @@ Which will _compile_, but throw an ```ArrayStoreException``` at runtime. Nice.
 
 Actually, we don't _have_ to make container types with an "append"-like method invariant. Scala also lets us put type bounds on things. So if we modify ```Box``` as follows:
 
-``` scala BoundedBox
+``` scala 
 class BoundedBox[+A] {
     set[B >: A](x : B) : Box[B]
 }
