@@ -1,11 +1,10 @@
 # Site settings
-title: Terms and Truth Conditions
+title: Terms and Truth-Conditions
 author: Michael Peyton Jones
 email: michaelpj@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Michael Peyton Jones' blog - mathematics, computer
+  science, philosophy
 baseurl: "/blog/" # the subpath of your site, e.g. /blog/
 url: "https://www.michaelpj.com/blog" # the base hostname & protocol for your site
 more: "More"
