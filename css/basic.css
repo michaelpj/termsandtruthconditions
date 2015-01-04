@@ -139,10 +139,7 @@ img {
     margin-right: 1.5em;
 }
 
-iframe.beeminder {
-    margin: 0;
-    padding: 0;
-    border: none;
-    height: 185px;
-    width: 230px;
+.beeminder {
+    height: 60px;
 }
+

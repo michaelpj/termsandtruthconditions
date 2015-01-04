@@ -1,5 +1,11 @@
 <footer class="site-footer">
-  <span><a href="{{ site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+  <span>
+    <a href="https://www.beeminder.com/michaelpj/goals/blog" >
+      <img src="https://www.beeminder.com/michaelpj/blog-thumb.png" class="beeminder">
+    </a>
+  </span>
+  <!--<span><a href="{{ site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>-->
   <span>{% for link_hash in site.links %}{% for link in link_hash %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endfor %}{% endfor %}</span>
+
   <span><i class="fa fa-copyright"></i>{{ site.time | date: "%Y" }}</span>
 </footer>
