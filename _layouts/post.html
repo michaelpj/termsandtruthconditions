@@ -10,11 +10,7 @@ layout: default
   <div>
 {{ content }}
   </div>
-  {% if site.isso_domain and page.comments %}
-  <div id="isso-thread" class="comments"></div>
-  {% endif %}
   {% if site.disqus_username and page.comments %}
-  <div id="disqus_thread" class="comments"></div>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  {% include disqus.html %}
   {% endif %}
 </article>
