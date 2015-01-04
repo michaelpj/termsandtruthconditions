@@ -2,7 +2,11 @@
   <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
   <nav>
     <ul>
-      <li><a href="{{ site.baseurl }}/">Home</a></li>{% for node in site.pages %}{% if node.title %}<li><a href="{{ node.url | prepend: site.baseurl }}"{% if page.url == node.url %} id="selected"{% endif %}>{{ node.title }}</a></li>{% endif %}{% endfor %}
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      {% for node in site.pages %}{% if node.title %}
+        <li><a href="{{ node.url | prepend: site.baseurl }}"{% if page.url == node.url %} id="selected"{% endif %}>{{ node.title }}</a></li>
+      {% endif %}{% endfor %}
+      <li><a href="{{ site.baseurl }}/feed.xml">RSS</a></li> 
     </ul>
   </nav>
 </header>
