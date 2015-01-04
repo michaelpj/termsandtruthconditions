@@ -1,0 +1,14 @@
+body {
+    padding: 0 calc(27% - 6em);
+    background: whitesmoke;
+}
+
+body > * {
+    padding-left: calc(13% - 1.6em);
+    padding-right: calc(13% - 1.6em);
+}
+
+article {
+    background: white;
+    border-top: 1px solid gainsboro;
+}

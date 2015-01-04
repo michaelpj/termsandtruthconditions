@@ -1,0 +1,118 @@
+body {
+    font-family: "Source Sans Pro", "Calibri", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin: 0;
+    font-size: calc(.6vmax + .8em);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gentium Basic", serif;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+a, a#selected {
+    transition: color .2s ease-out;
+    color: #46e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+header a, footer a {
+    color: inherit;
+}
+
+body > header, body > footer {
+    background-color: #181818;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+nav ul {
+    padding: 1em 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+h1 a, h2 a {
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+pre {
+    overflow: auto;
+    padding: 1em;
+    font-size: .8em;
+    line-height: 1.4em;
+}
+
+blockquote {
+    border-left: 5px solid #46e;
+    margin: 0;
+    padding: 0 1em;
+}
+
+article {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+article header {
+    text-align: center;
+}
+
+article header p {
+    color: dimgray;
+}
+
+article footer {
+    margin-top: 1.5em;
+}
+
+article footer a {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: .3em .6em;
+    transition: background-color .2s ease-out;
+}
+
+article footer a:hover {
+    background-color: black;
+    color: white;
+}
+
+article .comments {
+    margin-top: 2em;
+}
+
+body > footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+body > footer .fa {
+    margin: 0 .25em
+}
+
+body > footer .fa-copyright {
+    font-size: .85em;
+    margin-right: .5em;
+}
+
+article footer a::after {
+    font-family: "FontAwesome";
+    font-size: .8em;
+    margin-left: .4em;
+    content: "\f101";
+}

@@ -1,15 +1,20 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+<article>
+  <header>
+    <h2><a href="{{ page.url | prepend: site.baseur }}">{{ page.title }}</a></h2>
+    <p>{% if page.author %}{{ page.author }} • {% endif %}{% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}{% if page.categories %} • {{ page.categories | join: ', ' }}{% endif %}</p>
   </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+  <div>
+{{ content }}
+  </div>
+  {% if site.isso_domain and page.comments %}
+  <div id="isso-thread" class="comments"></div>
+  {% endif %}
+  {% if site.disqus_username and page.comments %}
+  <div id="disqus_thread" class="comments"></div>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  {% endif %}
+</article>

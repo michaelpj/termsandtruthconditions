@@ -1,14 +1,20 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="{{ site.encoding }}">
+  {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }}</title>
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+  <link href="{{ "/css/basic.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/browser.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/contrast.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+  <link href="{{ "/css/highlight.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} &raquo; Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+  {% if site.disqus_username and page.comments %}<script src="//{{ site.disqus_username }}.disqus.com/embed.js" async></script>{% endif %}
+  {% if site.isso_domain and page.comments %}<script data-isso="http://{{ site.isso_domain }}" src="//{{ site.isso_domain }}/js/embed.min.js"></script>{% endif %}
   <!--MathJax support-->
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script type="text/x-mathjax-config">
