@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Day at Work"
+title: "First day at work"
 date: 2012-10-23 22:16
 comments: true
 tags: Australia

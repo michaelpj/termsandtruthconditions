@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Master Argument for Effective Altruism"
+title: "The master argument for Effective Altruism"
 date: 2013-03-05 23:16
 comments: true
 tags: [philosophy, effective altruism] 

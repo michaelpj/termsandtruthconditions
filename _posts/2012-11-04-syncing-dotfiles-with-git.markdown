@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Syncing Dotfiles with Git"
+title: "Syncing dotfiles with git"
 date: 2012-11-04 18:20
 comments: true
 tags: [programming, git]

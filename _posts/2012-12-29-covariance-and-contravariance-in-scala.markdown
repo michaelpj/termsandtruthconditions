@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Covariance and Contravariance in Scala"
+title: "Covariance and contravariance in Scala"
 date: 2012-12-29 15:54
 comments: true
 tags: [programming, Scala, category theory]

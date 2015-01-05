@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Australia Update 2"
+title: "Australia update 2"
 date: 2012-12-29 15:09
 comments: true
 tags: Australia 

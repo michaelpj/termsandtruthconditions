@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Australia Update 3"
+title: "Australia update 3"
 date: 2013-03-14 22:32
 comments: true
 tags: Australia

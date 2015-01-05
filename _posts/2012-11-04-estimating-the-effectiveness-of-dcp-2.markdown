@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Estimating the Effectiveness of DCP - 2"
+title: "Estimating the effectiveness of DCP - Part 2"
 date: 2012-11-04 14:00
 comments: true
 tags: [effective altruism]

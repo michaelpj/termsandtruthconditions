@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Slides for Variance talk"
+title: "Slides for variance talk"
 date: 2013-03-06 23:30
 comments: true
 tags: [scala, computer science, category theory]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using the Free Monad to Avoid Stack Overflows in Scala"
+title: "Using the free monad to avoid stack overflows in Scala"
 date: 2013-03-16 13:10
 comments: true
 tags: [Scala, programming] 
