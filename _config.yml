@@ -17,6 +17,7 @@ disqus_username: termsandtruthconditions
 links:
   - github: "https://github.com/michaelpj/"
   - twitter: "https://twitter.com/mpeytonjones/"
+  - rss: "/blog/feed.xml"
 
 # markdown settings
 markdown: redcarpet
