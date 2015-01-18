@@ -29,8 +29,8 @@ live lives forced to comply with what we say we want, rather than what we actual
 We may get a world with *no* recreational drug use, even if nobody actually
 wants that!
 
-This is a reason why a future which relies more on ems may be more comfortable
-for humans. Although ems will probably face selection pressure to be
+This is a reason why a future which relies more on ems (human emulations) may be more comfortable
+for non-em humans. Although ems will probably face selection pressure to be
 law-abiding it would be very hard to truly purge them of any tendency to bend the 
 law, since they will be replications of opaque biological systems. If it is
 an em driving the car, rather than a *written* program, they might indeed let you
