@@ -98,13 +98,15 @@ as I could.
 
 That makes me feel like I'm the beneficiary of some moral luck myself - the
 majority of the good I expect to do in my life is due to the opportunities
-existing and being noticeable by people like me. Drop me in the 15th century and
+existing and being noticeable by people like me.[^privilege] Drop me in the 15th century and
 I'd be pretty useless.[^peasant] But in the longer term it may be that current conditions are going
 to become "business as ususal". By and large, I expect the future to be
 much more like today than like the 15th century.[^inequality] So I think today's
 good moral character is likely to be similar to good moral character in the future. 
 So our moral intuitions of what constitutes good character may just take a while to adjust
 to the world we now live in. 
+
+[^privilege]: Relevant: [The privilege of earning to give](http://www.effective-altruism.com/ea/dx/the_privilege_of_earning_to_give/).
 
 This doesn't mean that "traditional" moral character
 is going away. It's still likely to make you do more good things,
