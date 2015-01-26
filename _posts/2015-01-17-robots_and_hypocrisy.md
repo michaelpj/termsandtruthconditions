@@ -13,6 +13,8 @@ of scrutiny, especially if evidence of law-breaking is ever found. So it's
 safer for the programmers to simply make it extremely reluctant to even bend the
 law.
 
+<!-- more -->
+
 Software cannot safely be hypocritical because, unlike the human mind, the
 guiding logic is available to be inspected in detail - if not to a casual
 investigator, certainly to a judge with a warrant. Moreover, while it is
