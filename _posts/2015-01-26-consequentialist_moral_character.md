@@ -8,7 +8,7 @@ tags: [philosophy, ethics, effetive altruism]
 
 Consequentialist moral theories locate the good in the consequences of our
 actions. Naively, we might think that this then removes any sensible way of
-juding *persons* - the only thing that matters is what they do, after all. But
+juding *persons* - the only thing that matters is what they do. But
 that's simplistic. After all, our personal qualities affect how we act.
 
 <!-- more -->
