@@ -22,7 +22,7 @@ this:
 that they tend to perform.
 
 I've worded that so it's going to admit of degrees - as good consequentialists,
-we want to say that the person whoe saves a 1000 lives once a year has
+we want to say that the person who saves a 1000 lives once a year has
 a better character than the person who saves one life a day.
 
 Like all dispositional analyses, this is very sensitive to the situation. Exactly
