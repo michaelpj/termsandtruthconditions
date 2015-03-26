@@ -1,5 +1,5 @@
 ---
-title: Types and readibility
+title: Types and readability
 layout: post
 date: 2015-03-26 22:34
 
@@ -170,10 +170,10 @@ dragged out of flow to go and hunt down information that should be trivially
 available is horrendous.
 
 Obviously, I think that languages with static typing and type inference have a
-strict improvement in readibility over both Python and Java. You *do* need the
+strict improvement in readability over both Python and Java. You *do* need the
 compiler around a bit more to tell you the inferred types, but it's better than
 having all the redundant noise that Java forces on you. However, I highly doubt 
-that such languages are the supremum of readibility - no doubt there is further
+that such languages are the supremum of readability - no doubt there is further
 to go.
 
 But when it comes down to it, I would rather read Java than Python any day, and
