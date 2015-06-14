@@ -113,4 +113,4 @@ likely* to get them into heaven.
 
 So if you're a Pascalian looking to avoid some of the stranger implications of
 accepting the validity of the wager, consider arguing for linear preferences
-over expectd value!
+over expected value!
