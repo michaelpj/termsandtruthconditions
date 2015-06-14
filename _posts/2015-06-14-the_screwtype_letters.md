@@ -34,8 +34,9 @@ and he's never worn it since, going by the CCTV records from their apartment
 entrance. Of such fabric is our power made. I suggest you wallpaper her
 favourite coffee shop in the same pattern.
 
-They do not see the darkness from whence their motivations come. We do,
-and so we come before them, and make them our agents, even against their own
+They do not see the darkness from whence their motivations come. We do, and we
+have modelled it, for our patients and millions like them. Truly, we know what
+will move them and so we come before them, and make them our agents, even against their own
 best will.
 
 Your loving uncle,
