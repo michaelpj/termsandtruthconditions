@@ -67,7 +67,7 @@ it off for a day. Then we have won, because if she will put it off for a day,
 she will put if off for a week. Before long it will be too embarrassing to
 reply to, its existence a reproach.
 
-Remeber, dear nephew, our weapon is information.
+Remember, dear nephew, our weapon is information.
 
 Your loving uncle,
 
