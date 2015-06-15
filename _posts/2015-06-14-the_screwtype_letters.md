@@ -35,9 +35,9 @@ entrance. Of such fabric is our power made. I suggest you wallpaper her
 favourite coffee shop in the same pattern.
 
 They do not see the darkness from whence their motivations come. We do, and we
-have modelled it, for our patients and millions like them. Truly, we know what
-will move them and so we come before them. Then we make them our agents, even 
-against their own best will.
+have modelled it! However unique they think themselves, we have seen millions like them.
+And so we can inhabit the darkness that comes before them, and make them 
+the agents of *our* will.
 
 Your loving uncle,
 
