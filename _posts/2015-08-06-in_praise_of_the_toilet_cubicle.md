@@ -1,7 +1,7 @@
 ---
 title: In praise of the toilet cubicle
 layout: post
-date: 2015-08-01 17:58 BST
+date: 2015-08-06 17:58 BST
 
 tags: [gratitude]
 ---
