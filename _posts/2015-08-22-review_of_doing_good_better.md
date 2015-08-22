@@ -60,7 +60,7 @@ one owns. MacAskill does a good job of this, focussing on the positive
 
 Triage also teaches us that, with our finite resources, we simply have to
 prioritise. That means that we will have to leave some people on the hospital
-floor. Taken seriously, this nixes the though that effective altruists "don't
+floor. Taken seriously, this nixes the thought that effective altruists "don't
 care" about people in first-world countries. It's *awful* that we have to leave
 some work undone, but that can't stop us from doing the most effective things
 first. Seen through the lens of triage, I think the moral case is very
@@ -72,7 +72,7 @@ chapter is a devastating critique of the "PlayPump" - a charitable intervention 
 *seemed* wonderful, but ended up as anything but. As you read, it's easy
  to think that this is going to be a success story. The impassioned founder, the
  innovative idea, the heavyweight backing: it all sounds good. Until MacAskill
- points out the fundamental problem: it doesn'twork. And you can't tell that
+ points out the fundamental problem: it doesn't work. And you can't tell that
  without testing it. The message throughout is clear: while your intuitions may
  be a guide to the right choice when you have all the facs, they can't tell you
  those facts themselves, so there's no substitute for doing your research and running
