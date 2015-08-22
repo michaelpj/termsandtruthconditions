@@ -40,9 +40,9 @@ Having the parameters for the distribution means that we can get R to make up en
 
 (Looking at the graph we get, the improvements also appear to be also log-normally distributed). Finally, we can then average these results. Call that average A.   
 
-At this point, we need to plug in two final, very important parameters. These are figures for the money moved (M), and for the cost of DCP doing an investigation (C). These are particularly important as the our final estimate is going to be the average good done by an investigation (A\*M), divided by the cost of doing it (C). Our final estimate will therefore be directly proportional to M, and inversely proportional to C. We'll discuss these a little more in a future post. For now, I'm just going to give you some figures that are at least the right order of magnitude: namely about $530 million for M, and about $200,000 for C.
+At this point, we need to plug in two final, very important parameters. These are figures for the money moved (M), and for the cost of DCP doing an investigation (C). These are particularly important as the our final estimate is going to be the average good done by an investigation (A\*M), divided by the cost of doing it (C). Our final estimate will therefore be directly proportional to M, and inversely proportional to C. We'll discuss these a little more in a future post. For now, I'm just going to give you some figures that are at least the right order of magnitude: namely about \\$530 million for M, and about \\$200,000 for C.
 
-Putting all this together, we get an estimate for the effectiveness of DCP of a staggering 89 DALYs/$! For comparison, the best intervention that DCP claims to have found so far clocks in at 0.33 DALYs/$! As mentioned earlier, of course, this estimate is only as good as our model, but it certainly looks promising. In the next post I'll talk about how we can improve the model in a couple of ways.
+Putting all this together, we get an estimate for the effectiveness of DCP of a staggering 89 DALYs/\\$! For comparison, the best intervention that DCP claims to have found so far clocks in at 0.33 DALYs/\\$! As mentioned earlier, of course, this estimate is only as good as our model, but it certainly looks promising. In the next post I'll talk about how we can improve the model in a couple of ways.
 
 A few final caveats:
 
