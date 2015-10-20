@@ -23,7 +23,7 @@ links:
 markdown: redcarpet
 
 redcarpet:
-  extensions: [ "footnotes" ]
+  extensions: [ "footnotes", "tables" ]
 
 # Defaults
 defaults:
