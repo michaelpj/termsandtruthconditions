@@ -27,9 +27,9 @@ def naive = {
 
 ```
 
-This is similar to the situation where I first observed the problem: imagine you want to manage access to a connection with Reader, so you map over a list of "things to do", giving you a list of Readers, which you sequence and then feed in the connection. In this case the "thing to do" is trivial: just return what you got. And then I add them up, just so you can add this to your list of "stupid ways to get the length of a list".
+This is similar to the situation where I first observed the problem: imagine you want to manage access to a connection with `Reader`, so you map over a list of "things to do", giving you a list of `Reader`s, which you sequence and then feed in the connection. In this case the "thing to do" is trivial: just return what you got. And then I add them up, just so you can add this to your list of "stupid ways to get the length of a list".
 
-Okay, that's pretty bad, what's going on here? The problem is that we're building up a big Reader object (and a Reader is just a function, remember), which we only actually _execute_ at the end. And the way sequence works means we end up building a huge stack of functions (proportional to the length of the list!), and so when we run them we stack overflow.
+Okay, that's pretty bad, what's going on here? The problem is that we're building up a big `Reader` object (and a `Reader` is just a function, remember), which we only actually _execute_ at the end. And the way sequence works means we end up building a huge stack of functions (proportional to the length of the list!), and so when we run them we stack overflow.
 
 ### Uh oh ###
 
@@ -39,7 +39,7 @@ This is bad. We _really_ don't want to have to break out of monadic style arbitr
 
 ### A solution?
 
-I actually hit this problem at work, and I popped into the #scalaz IRC room to seek help. Naturally, what I got was a somewhat cryptic comment from Tony Morris that "the Free monad" was what I needed, but this was enough to put me on the trail. And yes, it does solve our problem, but as ever, it's no fun if we don't delve into the theory for a bit. So humour me for a while (or you can skip ahead to the bit where I tell you how to [fix the problem](#solution)).
+I actually hit this problem at work, and I popped into the `#scalaz` IRC room to seek help. Naturally, what I got was a somewhat cryptic comment from Tony Morris that "the Free monad" was what I needed, but this was enough to put me on the trail. And yes, it does solve our problem, but as ever, it's no fun if we don't delve into the theory for a bit. So humour me for a while (or you can skip ahead to the bit where I tell you how to [fix the problem](#solution)).
 
 ## Category theory time ##
 
@@ -104,7 +104,7 @@ case class Return[S[+_]: Functor, +A](run: A) extends Freee[S, A]
 case class Roll[S[+_]: Functor, +A](run: S[Freee[S, A]]) extends Freee[S, A]
 ```
 
-Let's run with this for a bit. We're going to define our own Free monad[^stolen], imaginatively named ```Freee``` (to avoid name collisions with Scalaz's Free), as the union of several cases, so we do that with a sealed abstract trait and some case classes that extend it. Also, in order to do some stuff with partially applying type constructors, I'm going to start using the super-ugly ["type-lambda"](http://stackoverflow.com/questions/8736164/what-are-type-lambdas-in-scala-and-what-are-their-benefits) trick.
+Let's run with this for a bit. We're going to define our own Free monad[^stolen], imaginatively named ```Freee``` (to avoid name collisions with Scalaz's `Free`), as the union of several cases, so we do that with a sealed abstract trait and some case classes that extend it. Also, in order to do some stuff with partially applying type constructors, I'm going to start using the super-ugly ["type-lambda"](http://stackoverflow.com/questions/8736164/what-are-type-lambdas-in-scala-and-what-are-their-benefits) trick.
 
 [^stolen]: By "our own", I mean blatantly stolen from the Haskell implementation, with the main source for my plagiarism being this excellent [SO answer](http://stackoverflow.com/questions/13352205/what-are-free-monads).
 
