@@ -93,7 +93,7 @@ class Box[+A] {
 // won't compile
 ```
 
-You get these kinds of errors in Scala because of the subtleties of how variance relates to _functions_ (and later, methods). We can see that there's something weird going on if we look at the declaration of the Function trait:
+You get these kinds of errors in Scala because of the subtleties of how variance relates to _functions_ (and later, methods). We can see that there's something weird going on if we look at the declaration of the `Function` trait:
 
 ``` scala
 trait Function1[-T1, +R] {
