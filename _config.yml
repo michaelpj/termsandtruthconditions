@@ -20,8 +20,6 @@ links:
   - rss: "/blog/feed.xml"
 
 # markdown settings
-#markdown: redcarpet
-
 redcarpet:
   extensions: [ "footnotes", "tables" ]
 
