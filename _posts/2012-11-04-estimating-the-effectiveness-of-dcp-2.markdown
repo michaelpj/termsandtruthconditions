@@ -8,7 +8,7 @@ tags: [effective altruism]
 
 *[This is the second of two posts I wrote on estimating the cost-effectiveness of the DCP organization.. It was originally published on the [Giving What We Can blog](http://www.givingwhatwecan.org/blog/2012-11-01/estimating-the-effectiveness-of-dcp-2).]*
 
-Warning: I'm now going to start assuming some serious statistics knowledge! Most readers should not expect to be able to follow the guts of what is being done, but the bottom line should still make sense. As before, we're using R to do most of the work, and the script is [attached](/downloads/code/dcp-effectiveness-2.R).
+Warning: I'm now going to start assuming some serious statistics knowledge! Most readers should not expect to be able to follow the guts of what is being done, but the bottom line should still make sense. As before, we're using R to do most of the work, and the script is [attached](/blog/downloads/code/dcp-effectiveness-2.r).
 
 In the previous post, I explained a simple statistical model for assessing the effectiveness of donating to DCP. In this post I would like to describe some improvements to the model. The most important of these is allowing for the possibility of error in DCP's assessment process. Some of the variation in the DCP’s results are due not to real differences in the cost effectiveness of treatments, but rather simply measurement error on their part. We will run simulations where we vary how large this error is, and see how much it reduces the value of DCP’s work. The bottom line is that given guesses about the size of the errors and the funding their research moves, DCP still appears much better to fund than the best treatment they identify.
 
@@ -28,7 +28,7 @@ This will already give us a more accurate estimate than we had before, but it al
 
 $$t_i \sim N(\mu, \sigma^2)$$
 
-$$m\_i \sim N(t\_i, \sigma'^2)$$
+$$m_i \sim N(t_i, \sigma'^2)$$
 
 where $\sigma'$ is the standard deviation of the error, $m\_i$ is the "measured" value, and $t\_i$ is the true value as before.
 
