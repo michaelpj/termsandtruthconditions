@@ -5,8 +5,8 @@ title: Types and the Extended Mind
 Lots of arguments about static typing and AOT compilation centre around certain
 supposed benefits of these disciplines: correctness, speed, and abstraction.
 
-I want to talk about the *information management* aspects of typing. My thesis
-is that any system which allows (and, ideally, requires) you to give the
+Instead, I want to talk about the *information management* aspects of typing. My
+thesis is that any system which allows (and, ideally, requires) you to give the
 computer information about what you're doing at development time amounts to
 moving some of that information into an automatically managed external storage
 system, and that when well done, this can form a valuable part of your extended
@@ -15,18 +15,19 @@ mind.
 # The extended mind
 
 What do I mean by "the extended mind"? In this case I *don't* mean the
-philosophical thesis championed by David Chalmers that sufficiently integrated
+philosophical thesis championed by David Chalmers wherein sufficiently integrated
 information technologies should be considered "a part of our mind". Instead, I
-mean the colloquial usage of that term to refer to a system that we offload some portion of our cognition to. In particular,
-the goal with the extended mind is to *completely* stop thinking about some
-aspect of our lives, freeing our minds up to do something else.
+mean the colloquial usage, referring to a system that we offload some
+portion of our cognition to. In particular, our goal with the extended mind is
+to stop thinking about some aspect of our lives with our brains, freeing them 
+up to do something else.
 
 In order to do that, a system has to be:
 - Trustworthy.
 - Usable as a real-time data source.
 
 For me, the canonical example of this kind of system is an electronic calendar,
-so lets see how that fulfills these criteria.
+so lets see how that fulfils these criteria.
 
 ## Trustworthiness
 
@@ -99,7 +100,7 @@ An electronic diary is a lot faster to access. You don't have to page to the
 day, and you're probably pretty adept at getting your phone out quickly.
 
 This increased speed manifests itself in having to keep a reduced amount of
-information in short-term memroy. When I had a paper diary I would usually memorize my daily schedule, and only actually go to
+information in short-term memory. When I had a paper diary I would usually memorise my daily schedule, and only actually go to
 the diary for checking or entering events in the future. It was just too
 annoying to get my diary out every time I wanted to know what I was supposed to
 be doing next! So I still had to keep my schedule in my head. Now I have my
