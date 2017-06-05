@@ -2,10 +2,10 @@
   addressable = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1j5r0anj8m4qlf2psnldip4b8ha2bsscv11lpdgnfh4nnchzjnxw";
+      sha256 = "1i8q32a4gr0zghxylpyy7jfqwxvwrivsxflg9mks6kx92frh75mh";
       type = "gem";
     };
-    version = "2.5.0";
+    version = "2.5.1";
   };
   colorator = {
     source = {
@@ -18,10 +18,10 @@
   ffi = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1nkcrmxqr0vb1y4rwliclwlj2ajsi4ddpdx2gvzjy0xbkk5iqzfp";
+      sha256 = "034f52xf7zcqgbvwbl20jwdyjwznvqnwpbaps9nk18v9lgb1dpx0";
       type = "gem";
     };
-    version = "1.9.14";
+    version = "1.9.18";
   };
   forwardable-extended = {
     source = {
@@ -34,10 +34,10 @@
   jekyll = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1yr9y8ygdwljdbx531p1achys81wmk89gdssnpvpzadrbql7v1lv";
+      sha256 = "1p7cyzvf61w6n0ba76yq34lg784ad3zk4q1jw25hdcj4b54xjfxj";
       type = "gem";
     };
-    version = "3.3.1";
+    version = "3.4.3";
   };
   jekyll-compose = {
     source = {
@@ -74,10 +74,10 @@
   kramdown = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "074pv7996lhz0iz4ymmb0jl5lfb8agxxxcpb05h1qjhladck15y4";
+      sha256 = "1isiqc40q44zg57bd6cfnw1a2l0s2j5skw2awn2cz3gcm7wsf49d";
       type = "gem";
     };
-    version = "1.13.1";
+    version = "1.13.2";
   };
   liquid = {
     source = {
@@ -114,10 +114,10 @@
   public_suffix = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1ig5ily94n4jcybsmir6wsya9z2l142g0p3g7vxm87m3f89z440x";
+      sha256 = "040jf98jpp6w140ghkhw2hvc1qx41zvywx5gj7r2ylr1148qnj7q";
       type = "gem";
     };
-    version = "2.0.4";
+    version = "2.0.5";
   };
   rb-fsevent = {
     source = {
@@ -130,10 +130,10 @@
   rb-inotify = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1yfcp3065n08balljmxn0qzwhdbwwxn2h9z89wmydyfj2gq1p71d";
+      sha256 = "0bq14f3md5nm00kgxgf0r9lcbn0vgbwljgajif0slxcwv622fjg9";
       type = "gem";
     };
-    version = "0.9.7";
+    version = "0.9.8";
   };
   rouge = {
     source = {
@@ -154,9 +154,9 @@
   sass = {
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0dkj6v26fkg1g0majqswwmhxva7cd6p3psrhdlx93qal72dssywy";
+      sha256 = "00mdak4hiaajnw4cbaklhfq4sr3rxy88kka9lq842qa8zs0607af";
       type = "gem";
     };
-    version = "3.4.22";
+    version = "3.4.24";
   };
 }
