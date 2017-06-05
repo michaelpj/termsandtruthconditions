@@ -2,7 +2,6 @@
 
 let 
   name = "terms-and-truth-conditions";
-  blogRoot = "blog";
   env = bundlerEnv {
     inherit name;
     inherit ruby;
@@ -30,9 +29,7 @@ in stdenv.mkDerivation {
     '';
   installPhase =
     ''
-      mkdir -p $out/${blogRoot}
-      cp -prvd _site/* $out/${blogRoot}/
-
-      cp -prvd .well-known $out/      
+      mkdir -p $out
+      cp -prvd _site/* $out/
     '';
 }
