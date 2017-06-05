@@ -7,6 +7,12 @@
       services.nginx = {
         enable = true;
 
+        # I don't know what I'm doing, so recommendations seem good
+        recommendedGzipSettings = true;
+        recommendedOptimisation = true;
+        recommendedProxySettings = true;
+        recommendedTlsSettings = true;
+
         # Redirect non-www to www
         # Note: doesn't do anything when deployed to testing
         virtualHosts."michaelpj.com" = { 
