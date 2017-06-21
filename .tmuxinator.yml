@@ -1,0 +1,10 @@
+# ~/.tmuxinator/blog.yml
+
+name: blog
+root: blog
+
+pre_window: nix-shell build/shell.nix --run zsh
+
+windows:
+  - server: jekyll serve --drafts
+  - editor: emacs
