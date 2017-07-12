@@ -16,11 +16,11 @@
 
   services.openssh.enable = true;
 
-  users.extraUsers.root.openssh.authorizedKeys.keyFiles = [ ../keys/github-mini.pub ];
+  users.extraUsers.root.openssh.authorizedKeys.keyFiles = [ ../../keys/github-mini.pub ];
   users.extraUsers.michael = {
      isNormalUser = true;
      extraGroups = ["wheel"];
-     openssh.authorizedKeys.keyFiles = [ ../keys/github-mini.pub ];
+     openssh.authorizedKeys.keyFiles = [ ../../keys/github-mini.pub ];
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.

@@ -1,5 +1,5 @@
 {
-  blog = 
+  server = 
     { config, pkgs, ... }:
     {
       imports = [ ./configuration.nix ];
