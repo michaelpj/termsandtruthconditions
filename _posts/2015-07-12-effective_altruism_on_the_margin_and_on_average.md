@@ -74,9 +74,9 @@ ourselves as *marginal* actors. That is, we are just one more extra person
 taking an action. This is importantly different from considering ourself as an
 *average* actor. One way to see this is to consider an investment with 
 decreasing marginal (there's that word again) returns: the first person who 
-invests \$1 gets \$10 back, the next person gets \$9, and so on. If 10 people have 
-invested already, then the *average* return is \$5. However, if I now
-make myself the 11th investor, my return will be \$0. The marginal return is much
+invests \\$1 gets \\$10 back, the next person gets \\$9, and so on. If 10 people have 
+invested already, then the *average* return is \\$5. However, if I now
+make myself the 11th investor, my return will be \\$0. The marginal return is much
 lower than the average, in this case.
 
 Thinking "on the margin" is very important. It can be tempting to assess how
