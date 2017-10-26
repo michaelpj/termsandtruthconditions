@@ -1,32 +1,18 @@
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="{{ site.encoding }}">
-  {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="{{ "/images/white.png" | prepend: site.baseurl | prepend : site.url }}">
-  <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }}</title>
-  <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
-  <link href="{{ "/css/basic.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
-  <link href="{{ "/css/browser.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
-  <link href="{{ "/css/contrast.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
-  <link href="{{ "/css/highlight.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
-  <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} &raquo; Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}">
-  {% if site.disqus_username and page.comments %}<script src="//{{ site.disqus_username }}.disqus.com/embed.js" async></script>{% endif %}
-  {% if site.isso_domain and page.comments %}<script data-isso="http://{{ site.isso_domain }}" src="//{{ site.isso_domain }}/js/embed.min.js"></script>{% endif %}
-  <!--MathJax support-->
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [['$', '$'], ['\\(','\\)']],
-          displayMath: [['$$','$$']],
-          processEscapes: true
-      },
-      TeX: { equationNumbers: { autoNumber: "AMS" } }
-    });
-  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+
+  {% include mathjax.hml %}
 </head>

@@ -109,6 +109,15 @@
     };
     version = "0.3.6";
   };
+  minima = {
+    dependencies = ["jekyll"];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0cgp03aw4pi74r0nf7ikka1qgijs110fhn2q9wl9z6a3vc1fmwg5";
+      type = "gem";
+    };
+    version = "2.1.1";
+  };
   pathutil = {
     dependencies = ["forwardable-extended"];
     source = {

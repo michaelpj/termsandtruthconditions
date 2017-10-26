@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {{ content }}
+
+  <ul class="post-list">
+  {% for page in paginator.posts %}
+    <li>
+    <article class="post">
+      {% include post_header.html %}
+      <div>
+        {{ page.excerpt }}
+      </div>
+      <footer>
+        <a href="{{ page.url | prepend: site.baseurl }}" class="more box">{{ site.more }}</a>
+      </footer>
+    </article>
+    </li>
+  {% endfor %}
+  </ul>
+  <!-- Pagination links -->
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li class="previous">
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer box">Newer</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older box">Older</a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
