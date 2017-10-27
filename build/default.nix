@@ -25,11 +25,7 @@ in stdenv.mkDerivation {
   buildInputs = [ env ruby ];
   buildPhase =
     ''
-      jekyll build
+      jekyll build -d $out
     '';
-  installPhase =
-    ''
-      mkdir -p $out
-      cp -prvd _site/* $out/
-    '';
+  dontInstall = true;
 }
