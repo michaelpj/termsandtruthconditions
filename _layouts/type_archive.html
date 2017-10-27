@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="home">
+  {% case page.type %}
+    {% when "year" %}
+      {% capture name %}{{ page.date | date: "%Y" }}{% endcapture %}
+    {% when "month" %}
+      {% capture name %}{{ page.date | date: "%B %Y" }}{% endcapture %}
+    {% when "day" %}
+      {% capture name %}{{ page.date | date: "%B %-d, %Y" }}{% endcapture %}
+    {% else %}
+      {% capture name %}{{ page.title | escape }}{% endcapture %}
+  {% endcase %}
+  <h1 class="page-heading">Archive of {{ page.type }} '{{ name }}'</h1>
+  {% include archive_list.html posts=page.posts %}
+</div>

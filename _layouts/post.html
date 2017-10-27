@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<article>
-  {% include post_header.html %}
-  <div>
+  {% include post_header.html post=page %}
+
+  <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-  <footer>
-    {% if site.disqus_username and page.comments %}
-    {% include disqus.html %}
-    {% endif %}
-  </footer>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
 </article>

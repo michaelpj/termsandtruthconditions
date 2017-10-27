@@ -1,7 +1,17 @@
-<header>
-  <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
-  <p>
-    {% if page.author %}{{ page.author }} • {% endif %}
-    {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
-    {% if page.tags != empty %} • {{ page.tags | join: ', ' }}{% endif %}</p>
+<header class="post-header">
+  <h1 class="post-title" itemprop="name headline">
+    <a class="post-link" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+  </h1>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+      {{ include.post.date | date: date_format }}
+    </time>
+    {% if include.post.author %}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.post.author }}</span></span>
+    {% endif %}
+    {% if include.post.tags != empty %} 
+      • {% include tag_links.html tags=include.post.tags %}
+    {% endif %}
+  </p>
 </header>
