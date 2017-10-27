@@ -1,37 +1,32 @@
 ---
 layout: default
 ---
-
 <div class="home">
 
   {{ content }}
 
+  {% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
+
   <ul class="post-list">
-  {% for page in paginator.posts %}
-    <li>
-    <article class="post">
-      {% include post_header.html %}
-      <div>
-        {{ page.excerpt }}
-      </div>
-      <footer>
-        <a href="{{ page.url | prepend: site.baseurl }}" class="more box">{{ site.more }}</a>
-      </footer>
-    </article>
-    </li>
-  {% endfor %}
+    {% for post in paginator.posts %}
+      {% capture post_lang %}{{ post.lang | default: site_lang }}{% endcapture %}
+      {% capture lang %}{% if post_lang != site_lang %}{{ post_lang }}{% endif %}{% endcapture %}
+
+      <li{% if lang != empty %} lang="{{ lang }}"{% endif %}>
+        {% include post_header.html post=post %}
+
+        <div class="post-content">
+          {{ post.excerpt }}
+        </div>
+        {% if post.content contains site.excerpt_separator %}
+          <p class="post-continue">
+            <a href="{{ post.url | relative_url }}">Read on &rarr;</a>
+          </p>
+        {% endif %}
+      </li>
+    {% endfor %}
   </ul>
-  <!-- Pagination links -->
-  <ul class="pagination">
-    {% if paginator.previous_page %}
-    <li class="previous">
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="newer box">Newer</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="older box">Older</a>
-    </li>
-    {% endif %}
-  </ul>
+
+  {% include pagination.html %}
+
 </div>

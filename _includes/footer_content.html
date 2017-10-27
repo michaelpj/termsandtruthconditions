@@ -1,0 +1,4 @@
+<div class="footer-content">
+<span>{% for link_hash in site.data.links.icon_links %}{% for link in link_hash %}<a class="icon-link" href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</span>
+<span><i class="fa fa-copyright"></i>{{ site.time | date: "%Y" }}</span>
+</div>

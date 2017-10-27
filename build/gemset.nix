@@ -41,6 +41,15 @@
     };
     version = "3.6.2";
   };
+  jekyll-archives = {
+    dependencies = ["jekyll"];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "15s2pncica46l6aghyw71v8l5aaxazsiyjn5539bls4kpsqz9bb3";
+      type = "gem";
+    };
+    version = "2.1.1";
+  };
   jekyll-compose = {
     dependencies = ["jekyll"];
     source = {
@@ -67,6 +76,15 @@
     };
     version = "1.5.0";
   };
+  jekyll-sitemap = {
+    dependencies = ["jekyll"];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0fp8fhk4zkpv79xifm4k47yl59mznq0fg7hcsb3wppm4n15wvnp2";
+      type = "gem";
+    };
+    version = "1.1.1";
+  };
   jekyll-watch = {
     dependencies = ["listen"];
     source = {
@@ -75,6 +93,15 @@
       type = "gem";
     };
     version = "1.5.0";
+  };
+  jekyll-whiteglass = {
+    dependencies = ["jekyll" "jekyll-archives" "jekyll-paginate" "jekyll-sitemap"];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1vmlnhcq44vd5iyi5qj6syls4mvdfvjxccqn9sccjjgycmkdp0jv";
+      type = "gem";
+    };
+    version = "1.3.0";
   };
   kramdown = {
     source = {
@@ -108,15 +135,6 @@
       type = "gem";
     };
     version = "0.3.6";
-  };
-  minima = {
-    dependencies = ["jekyll"];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "0cgp03aw4pi74r0nf7ikka1qgijs110fhn2q9wl9z6a3vc1fmwg5";
-      type = "gem";
-    };
-    version = "2.1.1";
   };
   pathutil = {
     dependencies = ["forwardable-extended"];
