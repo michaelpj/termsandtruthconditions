@@ -27,11 +27,14 @@ excerpt_separator: "<!-- more -->"
 theme: jekyll-whiteglass
 plugins:
   - jekyll-archives
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
 
-paginate: 5
-paginate_path: /posts/:num/
+pagination:
+  enabled: true
+  sort_reverse: true
+  per_page: 5
+  permalink: /posts/:num/
 
 jekyll-archives:
   enabled:
