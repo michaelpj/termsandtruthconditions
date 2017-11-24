@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Towards effective entrepreneurship: what makes a startup high-impact?"
 tags: [effective altruism]
 date: 2017-11-24 22:15

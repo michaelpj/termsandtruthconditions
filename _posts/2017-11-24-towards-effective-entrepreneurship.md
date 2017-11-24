@@ -1,4 +1,5 @@
 ---
+layot: post
 title: "Towards effective entrepreneurship: Good Technology Project post-mortem"
 tags: [effective altruism]
 date: 2017-11-24 22:00
