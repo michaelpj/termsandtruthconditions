@@ -3,7 +3,7 @@ title: Types and readability
 layout: post
 date: 2015-03-26 22:34
 
-tags: [programming, types, flamebait]
+tags: [computer science, types, flamebait]
 ---
 
 (or: why I won't write anything longer than a page in a dynamically-typed

@@ -2,7 +2,7 @@
 title: Why don't we handle our errors properly?
 layout: post
 date: 2017-07-19
-tags: [programming, types]
+tags: [computer science, types]
 ---
 
 If you're anything like me, you often find yourself writing code like this:

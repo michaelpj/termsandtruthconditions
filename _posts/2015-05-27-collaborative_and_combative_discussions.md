@@ -2,7 +2,7 @@
 title: Collaborative and Combative discussions
 layout: post
 date: 2015-05-27 22:52
-
+tags: [philosophy]
 ---
 
 > Have strong opinions, weakly held.

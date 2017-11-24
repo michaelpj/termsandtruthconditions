@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zero-knowledge cooperation
-tags: [decision theory, security]
+tags: [decision theory, security, computer science]
 ---
 
 A lot of ink has been spilled about how to get various decision algorithms to

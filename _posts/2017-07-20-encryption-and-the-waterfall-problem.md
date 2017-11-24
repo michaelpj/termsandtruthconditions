@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Encryption and the waterfall problem
+tags: [philosophy, computer science]
 ---
 
 In the philosophy of computer science, there is a problem sometimes
