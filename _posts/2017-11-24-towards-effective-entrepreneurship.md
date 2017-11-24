@@ -1,47 +1,68 @@
 ---
-title: Towards effective entrepreneurship
+title: "Towards effective entrepreneurship: Good Technology Project post-mortem"
+tags: [effective altruism]
+date: 2017-11-24 22:00
 ---
 
 # Introduction
 
 This document aims to be two things: a summary of the things that we learned
-from the Good Technology Project (GTP), and a post-mortem of the project itself.[^double-duty]
+from the Good Technology Project (GTP), and a post-mortem of the project itself.
 
-[^double-duty]: Why put both in the same post? I think that
-    in retrospect, a narrative description of what we did also serves as 
-    a reasonable path through the ideas that we came up with, and so it might as well serve double duty.
-    
+I'm going to simply state my beliefs in this post, but I should clarify beforehand that
+I am not very certain about these, they are my current best guesses.
+
 # What was GTP?
 
-The goal of GTP was broadly to do whatever we could to "fix" technology
-entrepreneurship. We observed that technology entrepreneurship is very powerful, 
-and yet most of its energy is going into solving unimportant problems ("Tinder for cats").
+GTP started in late 2015 when Richard Batty and I met up for coffee in Oxford. We ended up
+talking about entrepreneurship: both Richard and I were working in software, and
+we believed that entrepreneurship could provide a route to leverage our skills.
+But work on the concrete problem of how to *actually do* that was frustratingly
+sparse.
 
-How you might actually go about doing that is part of the topic of this document.
+<!-- more -->
+
+Once we started thinking about the area, we realised there was more to do. 
+The goal of GTP became broadly to do whatever we could to "fix" technology
+entrepreneurship. 
+We observed that technology entrepreneurship is very powerful, and yet the
+industry is not strongly incentivised to solve important problems.
+While they may prioritize well when it comes to profit, they *don't* prioritize
+well when it comes to impact, even when this is an explicit goal.
+
+We gradually ramped up our work on the project: in the middle of 2016 when we
+started making real progress, Richard quit his job to work part time on the GTP, supporting himself
+with freelancing. I also dropped down to four days a week at work, with one day
+on GTP. We continued in this way for about a year, which gave us quite a lot of
+flexibility, since Richard could adjust his hours easily, and I frequently
+worked Saturdays in addition to my one weekday.
+
+Since then we tried a number of different approaches (which I'll discuss below),
+before eventually stopping the project due to a combination of failure and lack
+of remaining steam.
 
 # A guiding model
 
-Before we discuss what GTP did, I'm going to present an abstract model of how we believe the entrepreneurship
-process works.[^similar] The point of this is to situate what we learned in
-terms of where we think it fits into the bigger picture.
-
-[^similar]: I think something like this model applies to other domains
-    where you are trying to start new things, like charity entrepreneurship.
+Before we discuss what GTP did, I'm going to present an abstract model of how we
+believe the entrepreneurship process works. The point of this is to
+situate what we learned in terms of where we think it fits into the bigger picture.
 
 ## The entrepreneurship landscape
 
 We can think of the space of potential startups as a height map over a plane.[^owen]
 The plane corresponds to roughly "where" the startup is, what problem it is
 solving, how it is solving it, etc. The "height" corresponds to how good the
-startup is by some measure (for now we'll assume there is just one thing we care
-about).
+startup is by some measure (for now we'll assume there is just one kind of
+"success", and that our entrepreneurs actually care about impact as well as
+profit and so will try to maximize it as best they can).
 
 [^owen]: Thinking about our space of opportunities like a landscape to explore
-    is not a new metaphor - c.f. Owen Cotton-Barratt's [EAG 2016 talk](https://www.youtube.com/watch?v=67oL0ANDh5Y).
+    is not a new metaphor - c.f. Owen Cotton-Barratt's [EAG 2016
+    talk](https://www.youtube.com/watch?v=67oL0ANDh5Y), and [other uses in the literature](https://link.springer.com/article/10.1007/s11138-015-0302-3).
 
 Then what we want to do is to locate the highest peaks in this landscape. These
 correspond to the best opportunities to get whatever it is that we want - money
-or impact, in this case.
+and impact, in this case.
 
 We have some broad beliefs about the landscape:
 - There is a huge amount of variation globally: the highest peaks are *much*
@@ -51,48 +72,96 @@ We have some broad beliefs about the landscape:
 - Peaks are relatively sparse: most of the points are low.
 
 These are based on the usual observations about the distributions of startup
-earnings/impact. I think they are fairly uncontroversial, so I'm not going to
-defend them further here.
+earnings/impact. While a significant portion of the variance there is going to
+be due to luck and other exogenous factors, I think that the most significant portion is
+due to the nature of the startup in question. So these aren't entirely
+uncontroversial assumptions, but I'm not going to defend them further here
+simply because I don't think it's the most interesting part of this post.
 
 ### Meet the locals
 
-The landscape is "inhabited" by individuals. The people local to an area of the
-landscape have a superior (although still imperfect) ability to survey it, and
-can often have success at identifying and climbing nearby hills. 
+Many people are trying to navigate the landscape and find peaks. Commonly these
+people have an "area" of expertise in which they're much better at surveying the
+landscape, and have a better ability to climb nearby hills. For example, someone
+who already has experience in retail business will be better able to assess
+opportunities that target retail businesses, and better able to tackle the
+problems along the way to making them a success.
 
-The locals correspond to individual entrepreneurs or potential entrepreneurs,
+These "locals"" correspond to individual entrepreneurs or potential entrepreneurs,
 and their situation in the landscape corresponds to their specialised knowledge,
 skills or beliefs (their 
-["edge"](https://medium.com/entrepreneur-first/understanding-founder-idea-fit-f16d658c0e8f)).
-We can think of people with more cross-cutting knowledge, like technology
-specialists, as inhabiting a "strip" across the landscape rather than a more
-compact region.
+["edge"](https://medium.com/entrepreneur-first/understanding-founder-idea-fit-f16d658c0e8f),
+to borrow a term from EF).
+
+A helpful distinction that EF makes is between people with a "domain" edge
+and people with a "technology" edge. This isn't a hard-and-fast distinction, but
+the idea is that people with a domain edge have some advantage relating to the
+problem or the business idea at hand, whereas people with a technology edge have
+an advantage in some aspect of the implementation.
+
+Since we think of startups that solve the same problem as being "close
+together" in our landscape, we can think of people with a domain
+edge as inhabiting a fairly compact region, whereas people with a technology
+edge occupy a cross-cutting strip of the landscape. If you know about
+distributed systems, then you might have an advantage in specific parts of both
+financial technology and medicine. (This isn't tremendously important, but I find it
+helpful to visualise the complex ways in which people's skills and knowledge
+might intersect.)
 
 ### Sky high 
 
-Far above the landscape are the "planners". They have very poor visibility of
+Far above the landscape are the "planners". The planners still want to find the
+highest peaks, but they have very poor visibility of
 the landscape. They may be able to tell that one area is generally hillier than
 another, but little more than this. They can drop expeditions down onto the
 landscape, but this is costly and is generally unlikely to land on a peak.
 
-We are the planners. We are trying to deliberately zoom in on the
-peaks across the whole landscape, without being already situated in that area.
+When we think about deliberately starting high-impact ventures, we are like the
+planners. We are trying to deliberately zoom in on the peaks across the whole
+landscape, even though we're not already situated in that area.
+
 We can learn about areas in more detail, but this requires laborious research,
 and even then our understanding is likely to be inferior to that of the locals.
 
 ### Implications of the landscape model
 
 This model is generally *pessimistic* about the ability of the planners to get
-to the peaks that they want to find. Most
-successful startups come from locals who know the region, rather from planning.
+to the peaks that they want to find. Because they have poor visibility into the
+landscape, it is hard for them to actually explore effectively without going
+through the effort of actually "becoming" a local. Most
+successful startups instead come from locals who know the region, and happen to
+be in the vicinity of a substantial peak.
+
 This leaves us in the rather unsatisfying state that Julia Galef outlines in
 ["Can we intentionally improve the
-world?"](https://juliagalef.com/2017/02/19/can-we-intentionally-improve-the-world-planners-vs-hayekians/),
-where we more or less have to concede that "Hayekian" camp is the major driver
-of innovation.
+world?"](https://juliagalef.com/2017/02/19/can-we-intentionally-improve-the-world-planners-vs-hayekians/).
+Julia contrasts two approaches: the top-down approach favoured by "Planners"
+(governments, foundations, effective altruists), and the bottom-up approach
+favoured by "Hayekians" (entrepreneurs of various stripes).
 
-I broadly agree with this, but I think there's some hope for "hybrid" solutions,
-which I'll outline later.
+While the Planner approach has had some success, the prevailing wisdom in modern
+startup theory is that the Hayekian approach is the only viable one. Success
+(as Paul Graham [argues](http://paulgraham.com/startupideas.html)) comes from 
+using situated knowledge to find and solve problems that actually occur on the
+ground, rather than by trying to impose a top-down plan.
+
+I broadly agree with these conclusions, but I think there's some hope
+for "hybrid" top-down/bottom-up solutions, which I'll outline later.
+
+### How general is this model?
+
+The landscape model seems like it is a good fit in situations where:
+- There is a large space of opportunities
+- The opportunities are very varied by some metric
+- There are many people with strong "local" knowledge
+- Local optimization is reasonable at finding nearby peaks
+- Global optimization is hard, and gaining enough knowledge to do local
+  optimization is also hard
+
+This applies not only to for-profit entrepreneurship, but to other exploratory domains, including
+charity entrepreneurship and perhaps even research. Exactly how hilly the
+landscape is or how strong the "local" advantage is will vary, but I think it
+may be a useful tool in other domains too.
 
 # Improving entrepreneurship
 
@@ -101,12 +170,13 @@ try?
 
 ## Advise entrepreneurs directly
 
-The first strategy we tried was to try and influence current, but pre-idea,
-entrepreneurs and get them to work on higher-impact projects.
+The first strategy we tried was to try and influence entrepreneurs directly.
+However, since we wanted to change what projects they worked on, we needed to
+get to them before they had committed to an idea. 
 
 To that end we teamed up with [EF](https://www.joinef.com/), a startup
 accelerator that takes individuals pre-idea, and helps them form teams and
-generate ideas.[^influence] We pitched to the EF7 cohort before they started,
+generate ideas.[^influence] We pitched to the Summer 2017 EF cohort before they started,
 and we got an excellent response: over 10% of the cohort said they were
 interested in talking about how to have more of an impact with their startup.
 
@@ -119,20 +189,21 @@ main problems:
 
 Firstly, the number one thing that entrepreneurs wanted from us was a better idea to
 work on. We were simply unable to provide such ideas (or at least appropriate
-ones, see the next point). 
+ones, see the next point).
 
 This points towards one of the features of the landscape model: it is hard for
 planners to know an entrepreneur's local area even as well as the entrepreneur, let alone *better*.
 
 Secondly, it was more or less impossible to persuade people to move towards
 domains they didn't know about. EF pushes very hard to get people to embrace
-their "edge"[^edge], and this means that it simply isn't realistic either to get
+their "edge", and this means that it simply isn't realistic either to get
 someone who knows about medicine to look at a finance idea, nor to get someone
 with flexible technical skills to work on an idea without a domain cofounder.
 
-[^edge]: We think this is good advice! We looked at 50 high-impact tech
-    companies, and almost all of them had a founder who had a strong background
-    in the area. Complete outsiders were rare.
+We think this is good advice! We looked at [50 potentially high-impact tech
+companies](https://docs.google.com/spreadsheets/d/1ecr4NikKJBqtMjaLThGZ5srHzzDYU85DWEC_RnaqJgc/edit#gid=0), 
+and almost all of them had a founder who had a strong background
+in the area. Complete outsiders were rare.
 
 Our observations of the cohort subsequently bore this out: everyone we knew
 ended up in a team where the problem was determined by the founder with the
@@ -155,7 +226,7 @@ domain expertise.[^sparrho]
 This points to another feature of the landscape model: entrepreneurs are locally
 situated by their existing background knowledge, and this is part of what lets
 them do what they do. Attempts to "move" them are likely to both meet with
-resistance and be ultimately [counterproductive](http://paulgraham.com/startupideas.html).
+resistance and be ultimately counterproductive.
 
 Finally, the number of people who were willing to actually contribute some work
 towards working out how to have a higher impact was almost zero (we had only one person from
@@ -170,7 +241,7 @@ During this time we also developed a fair amount of object-level material about
 what we think are the important factors in a high-impact startup. We presented
 this in some workshops to EF participants, and at EAG Oxford 2016. This is
 perhaps of interest, but it's not as relevant to the high-level picture so 
-I've relegated it to an appendix.
+I've relegated it to a follow-up post.
 
 ### So what do we say to entrepreneurs?
 
@@ -182,7 +253,7 @@ to be high-impact, in which case we *also* had little to say to them.
 
 Surprisingly, the most common advice we gave after this point was "try working
 or studying in an important area for a few years, then reconsider
-entrepreneurship". This is particularly important for tech specialists, since
+entrepreneurship". This is particularly important for people with a technology edge, since
 you want to either develop some domain edge in an important area, or find a
 cofounder there. This advice wasn't generally terribly well-received - people who've got to the
 point of thinking of themselves as potential entrepreneurs usually want to do
@@ -192,8 +263,9 @@ something *soon*.
 
 By far our most successful individual advice process was with a *repeat*
 entrepreneur, who had already sold his first company. This made a huge
-difference: he had far more resources to deploy on the process, and most of all
-he had *time*.
+difference: he had far more resources to deploy on the process, he had time, and
+most of all he cared enough to be willing to go in for another round because he
+wanted the change rather than the money.
 
 He had a pre-existing inclination to work on climate change, but we were able to
 help him narrow down the area to negative emissions technologies. I don't think
@@ -212,17 +284,25 @@ At a first brush, "what problem should I work on?" is a classic EA question -
 isn't this just cause prioritization? However, if you look at the cause
 prioritization work that we've actually done, it's all *far* too high-level to
 be action-guiding if you're actually looking to do new things. Knowing that
-animal welfare is high-priority is useful, but then you want to now which are
+animal welfare is high-priority is useful, but then you want to know which are
 the most important parts of the problem, and then which are the most important
 parts of *that* problem, until you find something you can actually tackle.
 
-[^search-vs-filtering]: I think part of the reason this hasn't been apparrent is
-    that EAs have often operated in an evaluating capacity. If you are being presented
-    with existing ideas and need to evaluate 
-    them, you can use a coarse cause prioritization as an initial filter
-    and then move on to more laborious methods. However, if you're looking for *new*
-    problems, then initially filtering down to a priority cause helps, but still
-    leaves far too much work for an individual to realistically do.
+I think there are a couple of reasons why this hasn't been apparent. One is
+simply that EAs haven't focussed on doing this kind of prioritization before.
+We have something to say to donors, early-career employees, and perhaps even
+later-career employees; but the "explorer" is a comparatively new personality
+for us. 
+
+Another reason is that EAs have often operated in an evaluating capacity. 
+If you are being trying to find the best donation opportunity, you are in the
+position of evaluating an discrete set of existing opportunities (the thing has
+to be established enough that you can donate to it!). If you are being presented 
+with existing ideas in this way and need to evaluate them, you can use a coarse 
+cause prioritization as an initial filter
+and then move on to more laborious methods. However, if you're looking for *new*
+ideas, then initially filtering down to a priority cause helps, but still
+leaves far too much work for an individual to realistically do.
 
 So what we need is much more granular cause prioritization, ideally right down
 to the size of a problem that can be worked on by an individual or
@@ -237,8 +317,9 @@ team.[^inspiration]
 The most ambitious version of this might look like an atlas of the world's
 problems, broken down by subproblems, and prioritized as best we can. This could
 be useful both for people working on solving problems, and also for establishing
-common vocabulary about just what they *are*. For example, MIRI's "Open Problems
-in AI" paper did wonders for just clarifying *what* the problems are, and was
+common vocabulary about just what they *are*. For example, Amodel et al's ["Concrete Problems
+in AI Safety"](https://arxiv.org/abs/1606.06565) paper did wonders for 
+just clarifying *what* the problems are, and was
 generally regarded as a very useful contribution for that reason.
 
 Nice as this vision is, it number of problems:
@@ -250,11 +331,9 @@ I [pitched](https://docs.google.com/document/d/17M--h_p73ARL3_keji53O3gHka4xPYrw
 this idea to a few people and got some interest, but I never took it very far. I
 still think it could be valuable, and a reasonable MVP would be a thin,
 "vertical", slice through a domain. I think health would be a good area for
-this, in that much of the needed material is already present.[^charity-entrepreneurship]
-
-[^charity-entrepreneurship]: Indeed, I think this is one of the reasons that
-    [Charity Entrepreneurship](http://www.charityentrepreneurship.com/) 
-    has been successful with the top-down approach in health.
+this, in that much of the needed material is already present. Indeed, I think this is one of the reasons that
+[Charity Entrepreneurship](http://www.charityentrepreneurship.com/) 
+has made so much progress with the top-down approach in health.
     
 The existence of this problem and the difficulty of solving it also supports the
 landscape model, since it illustrates the problems that the planners have in
@@ -262,35 +341,49 @@ understanding the landscape in enough detail to make decisions.
     
 ## Institutional solutions
 
-If we can't do much with any given entrepreneur, perhaps we can do something to
-change the mix of entrepreneurs who go on to form companies. 
+If we can't do much with individual entrepreneurs, perhaps we can achieve more
+by targeting the institutions that play a role in the entrepreneurship process.
 
-The fundamental idea is this: pick an important area, and then bias recruitment
+There are *a priori* reasons to think this might be a good strategy.
+Institutions already show signs of being more goal-driven and prioritizing than
+entrepreneurs: while entrepreneurs may be fixed on a particular idea or area,
+[VCs operate more like
+experimenters](http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.28.3.25), looking
+for promising areas and picking startups to fund as "trials". So if there is
+already strategic thought going on at this level, we might be able to influence it.
+
+One way in which startup accelerators and incubators in particular can affect
+the process is by changing the mix of people who become entrepreneurs. So the
+following idea suggests itself: pick an important area, and then bias recruitment
 towards people who *already* have the skills and inclination to work in that
 area (for example, you might recruit epidemiologists, development economists, and
-doctors, as well as technologists). If we can't win a hand, stack the deck.
+doctors, as well as technologists). If we can't win a hand, perhaps we can stack the deck.
 
 A minimal institutional solution would be to find an institution like EF and
 persuade them to let us bias their intake in this way. In practice, this is a
-hopeless goal with a for-profit institution. Even if they might *want* to adjust
-their process to have more of an impact, in reality anything that risks damaging
-the bottom line is too dangerous.
+difficult goal with a for-profit institution. Even if they might *want* to adjust
+their process to have more of an impact, anything that risks damaging
+the bottom line is dangerous. It's possible that some existing institutions
+might be willing to try this -- YC, for example, has been experimenting with some
+less profit-driven initiatives -- but we didn't manage to find any that we could
+work with.
 
 We might expect to have more success with institutions with a more explicitly
-altruistic mission. We didn't get as much exposure here, but our experiences
-suggested that they were either "ineffective altruists", and hence not terribly
-interested in our ideas; or they were still too young or too desperate and so
-were still overly worried about profitability. Possibly this approach might work
-if we could find the right institution, but we gave up.
+altruistic mission. We didn't manage to talk to as many people in this area, but our experiences
+suggested that they were either altruistic but not interested in taking an
+effective altruist approach; or they were still too young and so
+were still overly worried about profitability. This approach might work
+if we could find the right institution, but we weren't able to find one in the
+time we allowed ourselves.
 
 A third alternative would be to start a completely new institution explicitly
-designed with this goal in mind (we called this "the Lab" in a vain aspiration
-to be a new Bell Labs). This would also
+designed with this goal in mind (we called this "the Lab", inspired by Bell Labs). This would also
 offer the opportunity to design the programme and the funding process to help
-keep things on track in the later stages of startup formation.[^previous-discussion]
-
-[^previous-discussion]: I first suggested something like this in 
-    a [previous post](http://www.michaelpj.com/blog/2017/02/05/exploration-and-exploitation.html).
+keep things on track in the later stages of startup formation. This isn't a
+new idea: I suggested something like this in a [previous
+post](http://www.michaelpj.com/blog/2017/02/05/exploration-and-exploitation.html),
+and Spencer Greenberg's "Spark Wave" programme is a similar project (and is
+making some exiting progress).
     
 Furthermore, an institutional solution has the potential to scale well, by
 replicating itself, in a way that can be harder to do if you are targeting
@@ -298,12 +391,13 @@ individuals. Matt Clifford has a lovely metaphor for EF: startup investment is c
 like running after lightning strikes, whereas EF is trying to build an electricity
 generator. We should do this for high-impact startups too, and then make lots of them.
 
-I think this is a really exciting idea, but it's simply too high-risk and
-difficult to be tackled by a couple of relative nobodies like
-us.[^matt-and-alice] Ideally, we could do this by splitting off an existing
+I think this is a really exciting idea, but it's heavy on operations, sales, risk, and
+hustle, so we don't think that we are the right people to tackle
+it.[^matt-and-alice] 
+Ideally, we could start such a project by splitting off an existing
 institution, piggybacking off its existing operations capacity and connections.[^hard-work]
 
-[^matt-and-alice]: Sure, people have done this (e.g. Matt and Alice with EF),
+[^matt-and-alice]: People do start institutions like this from scratch (e.g. Matt and Alice with EF),
     but I fear survivorship bias.
 
 [^hard-work]: If that sounds like getting someone else to do all the hard work - 
@@ -325,12 +419,16 @@ From an individual point of view, that means if you're considering starting a
 social impact start-up in the future a good way of doing that would be to gain
 experience in an important problem area.
 
-Concretely, we could develop a more detailed advice programme for this. 80,000
-Hours' advice is currently on the level of 'go into software development' or 'go
-into data science', rather than tailored material to help someone who is already
-in a technical career to be able to maximise their domain knowledge for future
-impact. We’d like like to see more material for these people who are already in
-technology careers.
+Concretely, we could develop a more detailed advice programme for potential
+entrepreneurs and individuals later in their career. 80,000
+Hours would be the natural home for something like this, although they aren't
+currently prioritizing it. Currently a lot of their advice is focussed on people
+early in their careers, and making sure that they go into the right areas and
+build the right career capital. Helping to guide the process after people get
+further into their careers is a lot more work since it is quite career-specific,
+but not as much work as actually scoping out
+the problem space would be, since you are still assuming that people will find the most
+important problems themselves.
 
 The problems with this approach is that it has a very long lead time, and it
 relies on a long chain of fallible steps between influencing someone’s career
@@ -375,13 +473,14 @@ etc.? Can we design governance structures that make this easier?
 
 ## How come Charity Entrepreneurship can do top-down problem search?
 
-Firstly, I think [Charity Enterpreneurship](http://www.charityentrepreneurship.com/) 
+Firstly, I think [Charity Entrepreneurship](http://www.charityentrepreneurship.com/) 
 is *awesome*, and one of the best
 things to come out of the EA movement in years. I am a huge fan.
 
 How is it that they were able to do this top-down search in a way that I argued
 was, if not impossible, at least extremely hard? I think the answer is that they
-worked very hard, and that health is an unusually well-evidenced area. There
+worked very hard; the non-profit sector is less efficient than the for-profit
+sector; and health is an unusually well-evidenced area. There
 already *are* big compendiums of the health problems in the world (see the
 Global Burden of Disease), and good evidence on which ones work. There's still a
 big research and deployment task, and I think that is certainly more difficult
@@ -411,30 +510,31 @@ though much of it seems obvious in retrospect.
 
 This makes me think that many of the things that we came up with are in the camp
 of "surprisingly useful obvious truths", which take a deceptively large amount
-of sweat to discover. So I hope you will look upon them tenderly.
+of sweat to discover. So I hope you will not disdain our offerings.
 
-I also think we did a pretty good job of refining the problems that we were
+I also think we did a good job of refining the problems that we were
 working on. We changed tack fairly frequently, and were fairly responsive to new
 evidence as we got it (with a lot of soul-searching along the way). I think we
 were guilty both of stopping things too early and of stopping things too late,
 but it could have been worse.
 
+One thing that we found surprising was just how easy it was to make *some*
+progress, and say some things that had not obviously been said before. Even
+after spending a couple of years reading and talking about these problems, I
+still think that a lot of what we did was fairly original (of course, we might
+just have missed things!). I think
+the moral is that there are still uncharted areas to investigate,
+and if you're in early then even amateurs like ourselves can make progress.
+
 ### Team cohesion
 
-We worked very well together. I found that team cohesion and work habits made a
+Richard and I worked very well together. I found that team cohesion and work habits made a
 huge amount of difference - GTP has been by far my most extensive and successful
 project to date.
 
-I think we also did the right think keeping the team small. I don't think we'd
+I think we also did the right thing keeping the team to just the two of us. I don't think we'd
 have been much more productive with more people, and we were able to keep
 scheduling to a minimum and be fairly spontaneous about meeting people.
-
-### Doing something in a relatively uncharted space
-
-One thing that we found surprising was just how *easy* it was to make some
-progress, and say some things that nobody appeared to have said before. I think
-the moral is that there are still uncharted wilds to conquer,
-and if you're in early then even amateurs like ourselves can make progress.
 
 ### Unexpected useful outcomes
 
@@ -454,6 +554,10 @@ aiming to avoid that kind of work in future.
 
 Richard, on the other hand, really likes it, and is now doing much more of that
 kind of thing for 80,000 Hours.
+
+Both of us found that actually running a project, while rewarding, was
+ultimately more difficult and stressful than we really wanted. I have gained
+even more respect for people who pull it off.
 
 ### Organization
 
@@ -480,8 +584,8 @@ committed more time.
 The project might well still have failed, but perhaps more interestingly.[^elon-musk]
 
 [^elon-musk]: The unfair version of this is to say "would the project have
-    failed if Elon Musk had been runnning it?" If the answer is no, you weren't
-    working hard enough.
+    failed if Elon Musk had been running it?" If the answer is no, you weren't
+    working hard (or smart!) enough.
     
 ### Especially unclear goals
 
@@ -501,7 +605,11 @@ the lesson here is familiar: don't count your customers until they've actually b
 ### Research
 
 While I don't think this went *terribly*, I do think that much it was largely
-useless. 
+useless. Our research mostly consisted of shallow reviews of one kind or
+another: either for entrepreneurs who we were trying to advise, to help them
+narrow down a field; or to help us figure out what fields to focus on; or as
+part of a number of abortive collaborations with institutions. In very few of
+these cases did anyone actually *use* the research that we'd done.
 
 One surprising thing we learnt was that by far the most useful people
 to talk to were relatively junior EAs in a field. Unlike their seniors who had
@@ -511,7 +619,11 @@ about this a *lot*, and can be a great starting point.
 
 Similarly, we got much better material from people working at foundations, who
 are used to looking at whole fields and assessing the importance and overall
-diretion of research.
+direction of research.
+
+A positive effect of having done a lot of shallow research is that can give you
+enough "interactive knowledge" to talk to specialists and read papers with some understanding.
+This is very helpful if you are frequently dipping into an area.
 
 ### Organization
 
@@ -524,6 +636,14 @@ work and my loathing of Asana made this an uphill struggle.
 I think GTP as a whole has been a failure: it certainly failed to achieve its goals.
 However, I think we've learned some useful things along the way.
 
+My list of high-level takeaways would be:
+- Entrepreneurship has a lot of potential, and there are many opportunities
+  which could do with further exploration
+- Influencing the entrepreneurship process is tricky, and may require applying
+  leverage indirectly (via institutions, funders, etc.)
+- More granular cause prioritization would be very useful for "explorers"
+- The top-down/bottom-up conflict is real, but there is scope for hybrid solutions
+
 I'm still very interested in this area, and I'd be very happy to talk to anyone
 about it in more detail. In particular, if you're interested in working on any
 of the ideas in this document, please do get in touch.
@@ -534,11 +654,14 @@ I'd like to take a moment to thank some of the people who helped particularly
 with this project. In no particular order:
 
 - Ben Clifford
+- Ben Todd
+- Eric Gastfriend
+- Goodwin Gibbins
 - Kit Harris
+- Mario Pinto
 - Matt Clifford
 - Matt Gibb
 - Max Dalton
-- Mario Pinto
 - Naomi Morton
 - Owen Cotton-Barratt
 - Peter Hartree
@@ -547,194 +670,4 @@ with this project. In no particular order:
 - Spencer Greenberg
 
 Your generosity with your time and brainpower has been much appreciated.
-
-# Appendix
-
-This section owes a great deal to prior work and thought by Spencer Greenberg,
-Eric Gastfriend, and Peter Hartree.
-
-A lot of this material is more-or-less obvious applications of EA thought to
-startup theory. Nonetheless, it managed to be surprising and useful to people,
-so perhaps it is less obvious than it seems.
-
-In addition, some of it relates to how to manage a startup in later stages. We
-never really got a chance to try this out, so it is especially speculative.
-
-## What makes a startup high impact?
-
-We’re interested in startups because we think that they might be a mechanism 
-by which we can have a large positive impact on the world. But what are the qualities that we should look for in a startup?
-
-## Impact model
-
-Before we get started on assessing how good a company is, we should try and get 
-clear on how that company benefits the world, to make an impact model for the company.
-
-The first big consideration is who the company helps. Usually there will be one
-group in particular that you are expecting to benefit. A good way of figuring
-out who these are is to consider the various groups of “affectees” for your company.
-
-### Customers
-
-Customers are the most obvious people who benefit (or suffer) from the existence 
-of a company. They pay a cost in money and time, and they gain your product in return. 
-
-For example, [Mesh Power](https://www.meshpower.co.uk/)’s[^bust] primary beneficiary group is its customers (insofar as
-you think that promoting clean energy over burning kerosene might have
-environmental benefits, Mesh Power may also have some externality benefits, see below).
-
-[^bust]: Sadly, it looks like they've gone bust since I last checked, but
-    they're still a good example of the principle.
-
-While we can usually assume that people will buy things that actually improve
-their lives, this isn’t universally true. Cigarettes and addictive drugs or games are examples of this.
-
-### Third parties
-
-The operation of your company will also affect people who are not part of the
-transaction, or even involved at all. These effects are called externalities.
-Often these are positive, in the case of innovation and economic growth, but
-they can also be negative, such as pollution, developing dangerous new
-technologies, or causing technological unemployment.
-
-For example, despite being a car company, arguably Tesla’s primary beneficiary
-group are third parties, because accelerating the progress of electric cars and
-storage will help to ameliorate climate change.
-
-An important class of externality is benefits produced by your customers, which
-will often happen if you’re selling to businesses or institutions. For example,
-disease outbreak monitoring systems may be sold to governments, but the
-beneficiaries are the people who don’t get ill because of the government's’
-improved preventative action.
-
-### Employees
-
-A third category of beneficiaries is your employees. They will gain pay and
-satisfaction from working for you, but will also spend their time. In bad cases 
-they could experience physical or psychological harm because of the job.
-
-For example, one of [M-PESA](https://www.mpesa.in/)’s beneficiary groups are among its employees, since
-it needs lots of places for customers to buy and sell mobile money, and this 
-provides additional income for a lot of relatively poor shop owners.
-
-### Impact mechanism
-
-The next thing to do is to work out how you think your startup will actually
-affect your target group of beneficiaries. This is likely to be very uncertain,
-especially if you expect to create an impact through externalities. However,
-it's better to explicitly write down what you're uncertain about nonetheless.
-
-For example, here's one mechanism by developing a better test for drug-resistant
-TB might improve wellbeing:
-- Decrease cost of TB test
-- Increase availability of test in low-resource areas
-- Accurately distinguish more cases of drug-resistant TB from normal TB
-- Give more drug-resistant TB sufferers the correct drugs
-- Cure more people of drug-resistant TB than otherwise
-- Fewer people go through the lengthy suffering of drug-resistant TB
-- Increase wellbeing
-
-There may well be several such mechanisms, of course!
-
-Once you have an explicit impact mechanism, that gives you a two useful things: a set of
-hypotheses about how your impact occurs, which you can *test*; and a set of stages
-in the mechanism which you can *measure*.
-
-Most of these won't be things you can test or measure now, but it's worth
-thinking from time to time whether you might be able to measure more of them.
-For example, in early development you might focus on measuring the cost of the
-test, but as you roll out you might also be able to measure improvements in availability.
-
-## Assessing the impact model
-
-We can apply our usual INT heuristics in this case, although we can pick out some
-particular considerations for the domain.
-
-### Scale
-
-As ever, we care about both how many people we help and how much we help
-them.
-
-We should think about maximum scale here: if you could eventually sell your
-product to everyone on Earth, that's better than if you're limited to just one
-national market. If we think about our possible beneficiary groups, third parties
-tend to be the biggest group, followed by your customers, and then your employees.
-
-Similarly, a life-saving product is much better for each person than something
-that merely saves them some money.
-
-### Tractability
-
-There are a couple of big things that affect tractability.
-
-The first is obvious: the problem may be hard. Or the problem may be easy, but
-making it *profitable* may be hard. And we're primarily thinking about
-businesses here, so if you can't make it profitable, you can't do it.
-
-Secondly, you might not *want* to do it. Running a business is hard work, and
-you face pressure not only to drop out, but to cave in on issues where your
-investors or advisors may not be aligned with what you want. If your beneficiary
-group is your customers, then your profit goals and your impact goals are
-relatively aligned, so this may be easier. 
-
-In other cases this is less
-likely. For example, Uber (may be) benefiting its 1.5 million drivers. But they
-are not incentivised to employ these people, because doing so costs them, so as
-soon as they can automate them away, they will.
-
-Finally, you might not be able to figure out *what* to do. Even if you can
-identify the problem, you may not be able to figure out a plausible mechanism to
-actually have an impact on it, or your mechanism might fail to work.
-
-Tractability issues result in two big failure modes:
-- The business fails entirely
-- The business succeeds, but it has a low or negative impact
-
-### Counterfactuals/Neglectedness
-
-Assuming that you start a business that solves a real problem, we can assume
-that someone would have solved it eventually. That means that the effect you
-have is the *difference* between those two, which will look like getting X extra
-years of the solution. We can call this your *time advantage*.
-
-Generally, the bigger the time advantage the better. If the problem is big
-enough, then even a short time advantage may not be a problem - getting a
-malaria vaccine a year earlier would be huge!
-
-But generally bigger is better. There are a few ways you might have a big time
-advantage:
-
-Firstly, the technology you use has existed for a while but hasn't been applied to the
-problem that you are applying it to. That suggests that it would continue to
-be unsolved in that way for a long time if you don't do it. 
-
-Counterintuitively,
-this suggests that you should stay *away* from new technologies: it is very
-likely that someone will try "machine learning for X" relatively soon, so it is
-unlikely to be neglected.
-
-Another common case is that the problem requires an unusual combination of skills, knowledge, or
-inclinations. For example, you might know about both financial services and the
-developing world, while also being altruistic. Combinations of traits are
-correspondingly rarer - if you have at least one moderately rare skill, then it
-is likely that you also have one *very* rare combination of skills. 
-It may be a long time before this combination comes along again, and so if there
-are problems that require it, they may go unsolved until then.[^secrets]
-
-[^secrets]: Peter Thiel talks about "secrets" which are unusual beliefs that you
-    have which make you think that a problem is soluble, even though the general
-    belief may be that it is not. These are another thing that can make you unusual.
-
-This suggests that you should look especially hard for problems that *only you*
-(or you and your friend with the other unusual skills) can solve, because that
-is likely to give you a big time advantage.
-
-Finally, the incentives to solve the problem may be lacking (e.g. the customers
-are poor). This is a tough case, because those incentives will also be lacking
-for *you*. So you need a good story about how you are going to keep your impact
-on track. Many benefits to third parties have this form. Often if the
-externality is innovation then a strong founder can ensure that most of the
-benefit is produced before they are phased out. For example, Tesla has chosen to
-give away their patents for free, which might not have happened with a less
-altruistic CEO.
 
