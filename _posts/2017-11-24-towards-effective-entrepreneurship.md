@@ -423,7 +423,7 @@ experience in an important problem area.
 Concretely, we could develop a more detailed advice programme for potential
 entrepreneurs and individuals later in their career. 80,000
 Hours would be the natural home for something like this, although they aren't
-currently prioritizing it. Currently a lot of their advice is focussed on people
+currently prioritizing it. Currently, a lot of their advice is focussed on people
 early in their careers, and making sure that they go into the right areas and
 build the right career capital. Helping to guide the process after people get
 further into their careers is a lot more work since it is quite career-specific,
@@ -634,7 +634,8 @@ work and my loathing of Asana made this an uphill struggle.
 
 # Conclusion
 
-I think GTP as a whole has been a failure: it certainly failed to achieve its goals.
+I think GTP as a whole has been a failure: it certainly failed to achieve its stated goals, 
+although these were fairly ambitious.
 However, I think we've learned some useful things along the way.
 
 My list of high-level takeaways would be:
