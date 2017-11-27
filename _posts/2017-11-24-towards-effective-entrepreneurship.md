@@ -281,7 +281,7 @@ to see Founders' Pledge, or someone similar, looking into this.
 One reason we couldn't advise entrepreneurs well was because we didn't have
 *good problems* to offer them. So perhaps we could get better at that?
 
-At a first brush, "what problem should I work on?" is a classic EA question -
+At first blush, "what problem should I work on?" is a classic EA question -
 isn't this just cause prioritization? However, if you look at the cause
 prioritization work that we've actually done, it's all *far* too high-level to
 be action-guiding if you're actually looking to do new things. Knowing that
