@@ -384,7 +384,7 @@ keep things on track in the later stages of startup formation. This isn't a
 new idea: I suggested something like this in a [previous
 post](http://www.michaelpj.com/blog/2017/02/05/exploration-and-exploitation.html),
 and Spencer Greenberg's "Spark Wave" programme is a similar project (and is
-making some exiting progress).
+making some exciting progress).
     
 Furthermore, an institutional solution has the potential to scale well, by
 replicating itself, in a way that can be harder to do if you are targeting
