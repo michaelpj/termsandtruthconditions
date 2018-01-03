@@ -2,8 +2,8 @@
 
 name: blog
 
-pre_window: nix-shell build/shell.nix --run zsh
+pre_window: nix-shell --run zsh
 
 windows:
-  - server: jekyll serve --drafts
+  - server: jekyll serve --drafts --incremental
   - editor: emacs

@@ -13,7 +13,9 @@ timezone: Europe/London
 
 # build settings
 exclude: 
-  - build
+  - default.nix
+  - gemset.nix
+  - update-gems.sh
   - Gemfile
   - Gemfile.lock
   - README.md

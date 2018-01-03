@@ -1,12 +1,12 @@
-{ stdenv, bundlerEnv, ruby, lib }:
+{ pkgs ? (import <nixpkgs> {}), stdenv ? pkgs.stdenv, bundlerEnv ? pkgs.bundlerEnv, ruby ? pkgs.ruby, lib ? pkgs.lib }:
 
 let 
   name = "terms-and-truth-conditions";
   env = bundlerEnv {
     inherit name;
     inherit ruby;
-    gemfile = ../Gemfile;
-    lockfile = ../Gemfile.lock;
+    gemfile = ./Gemfile;
+    lockfile = ./Gemfile.lock;
     gemset = ./gemset.nix;
   };
 in stdenv.mkDerivation {
@@ -15,13 +15,11 @@ in stdenv.mkDerivation {
     (path: type: 
       let baseName = baseNameOf (toString path); 
       in !(
-        # Filter out the build dir
-        (type == "directory" && baseName == "build") ||
-        # And the site dir
+        # Filter out the site dir
         (type == "directory" && baseName == "_site")
       )
     ) 
-    ./..;
+    ./.;
   buildInputs = [ env ruby ];
   buildPhase =
     ''
