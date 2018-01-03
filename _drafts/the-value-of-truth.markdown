@@ -2,10 +2,8 @@
 layout: post
 title: "The Value of Truth"
 date: 2012-10-19 15:25
-comments: true
 categories: [philosophy]
 published: false
-author: Michael PJ
 ---
 
 >The Will to Truth, which is to tempt us to many a hazardous enterprise, the
@@ -25,7 +23,7 @@ the first time I read it: what is the value of truth?
 
 <!-- more --> 
 
-Nietzsche is mostly interested in slagging off all past
+Nietzsche is mostly interested in roasting all past
 philosophers (going so far as to name names, extensively), but the starting point
 of his critique is the claim that all philosophical activity rests on a set of
 unjustified presumptions. To even get started doing philosophy, we have to
@@ -60,8 +58,16 @@ values, and thus at the very foundation of philosophy we have slipped in a
 >always well (and wise) to first ask oneself: "What morality do they (or does
 >he) aim at?" -- *BGE*, 1.6
 
-That is, before enquiry can even begin, there must be some kind of
-value-judgement made.
+That is, before enquiry can even begin, we have to make some kind of
+value-judgement. If the truth is to be valuable to you, it has to actually help
+you get something you want. You might value the truth itself, of course, but
+then you still have to say that before you can go about pursuing it.
+
+Now, Nietzsche is primarily interested in morality, but
+everything he says here applied perfectly well to agents who only have
+prudential concerns: you still need to decide what your goals are before you can
+decide whether the truth is useful. For our purposes here, the two are fairly
+interchangeable, so I'll use moral and prudential examples fairly interchangeably.
 
 Nietzsche, then, leaves us with two questions:
 
@@ -69,6 +75,25 @@ Nietzsche, then, leaves us with two questions:
 2. How are we to decide that question?
 
 TODO: talk about 2 first, it's more fundamental!
+
+## Is moral evaluation prior to epistemology?
+
+I think Nietzsche is right about this. You *do* need to decide what
+your goals are before you can evaluate how useful the truth is to you, and there
+*are* some cases where even sensible evaluative models will say that you should
+believe false things.
+
+Existence proof:
+
+> An evil demon threatens to torture all humans for eternity unless you believe
+> that tomatoes are a vegetable.
+
+Should you do it? Well, yes, duh. (If you answered no, then our disagreements
+ are serious indeed.) Of course, you're never going to be in a situation that
+ ridiculous, but the point is that the value of the truth really isn't
+ fundamental. It's just so useful that we might as well treat it as such.
+ 
+But wait, you may respond, isn't this assuming some kind of 
 
 ## Is the truth valuable?
 
