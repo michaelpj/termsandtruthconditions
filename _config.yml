@@ -5,7 +5,7 @@ email: me@michaelpj.com
 description: > # this means to ignore newlines until "baseurl:"
   Michael Peyton Jones' blog - mathematics, computer science, philosophy.
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://www.michaelpj.com" # the base hostname & protocol for your site
+url: "https://www.michaelpj.com" # the base hostname & protocol for your site
 
 # locale
 lang: en-GB
@@ -14,7 +14,6 @@ timezone: Europe/London
 # build settings
 exclude: 
   - build
-  - .well-known
   - Gemfile
   - Gemfile.lock
   - README.md
@@ -53,17 +52,3 @@ github_username:  michaelpj
 disqus:
   shortname: termsandtruthconditions
 google_analytics: UA-111869417-1
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      comments: true
