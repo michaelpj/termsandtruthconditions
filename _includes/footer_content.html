@@ -1,4 +1,16 @@
+{% assign feed_path = "/feed.xml" %}
+{% if site.feed and site.feed.path %}
+  {% assign feed_path = site.feed.path %}
+{% endif %}
+
 <div class="footer-content">
-<span>{% for link_hash in site.data.links.icon_links %}{% for link in link_hash %}<a class="icon-link" href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</span>
+<span>
+  {% for link_hash in site.data.links.icon_links %}
+    {% for link in link_hash %}
+      <a class="icon-link" href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a>
+    {% endfor %}
+  {% endfor %}
+  <a class="icon-link" href="{{ feed_path | absolute_url }}"><i class="fa fa-rss"></i></a>
+</span>
 <span><i class="fa fa-copyright"></i>{{ site.time | date: "%Y" }}</span>
 </div>

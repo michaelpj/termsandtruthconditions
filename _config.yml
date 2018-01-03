@@ -23,6 +23,7 @@ redcarpet:
   extensions: [ "footnotes", "tables" ]
 more: "More"
 excerpt_separator: "<!-- more -->"
+comments: true
 
 theme: jekyll-whiteglass
 plugins:
