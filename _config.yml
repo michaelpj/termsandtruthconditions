@@ -15,6 +15,7 @@ timezone: Europe/London
 exclude: 
   - default.nix
   - gemset.nix
+  - result
   - update-gems.sh
   - Gemfile
   - Gemfile.lock
