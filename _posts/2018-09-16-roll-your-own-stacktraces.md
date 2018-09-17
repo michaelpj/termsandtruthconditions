@@ -18,6 +18,8 @@ But what about in Haskell?
 
 <!-- more -->
 
+## Adding context to `MonadError`
+
 Haskell *does* have exceptions, and they *do* now have stack traces. However,
 most Haskellers frown on using exceptions for anything other than tricky IO
 problems or assertion failures, since they pollute the purity of the code.
@@ -109,11 +111,7 @@ eval e = (case e of
 
 Here we're using `catchError` to catch any errors thrown by `eval`, wrap them in
 a new error (it has to be of the same type, hence why we need a new `Error`
-constructor), and then rethrow them.[^abstract]
-
-[^abstract]: We could abstract this a little more. Introducing a wrapper for
-    errors with context and writing some common context-adding functions might
-    be worth it. 
+constructor), and then rethrow them.
 
 Running our program again, we now get something more helpful:
 ```
@@ -129,4 +127,35 @@ trace", and we have to put all the information in ourselves. So it's less useful
 for the case where something fails in a way you hadn't anticipated, but it's
 still very useful for cases where you're expecting errors.
 
+## Generalising a little
 
+We can generalise this a little bit to make what's going on slightly clearer:
+
+```haskell
+data WithContext c e = Plain e | Context c (WithContext c e)
+
+instance (Show c, Show e) => Show (WithContext c e) where
+    show (Plain e) = show e
+    show (Context c e) = (show c) ++ "\n" ++ (show e)
+    
+withContext :: (MonadError (WithContext c e) m) => c -> m a -> m a
+withContext c act = catchError act $ \err -> throwError $ Context c err
+    
+eval :: (MonadError (WithContext String Error) m) => Expr -> m Int
+eval e = withContext ("evaluating " ++ (show e)) $ case e of 
+    Const i -> pure i
+    e@(Plus e1 e2) -> (+) <$> eval e1 <*> eval e2
+    e@(Minus e1 e2) -> (-) <$> eval e1 <*> eval e2
+    e@(Div e1 e2) -> do
+        e1' <- eval e1
+        e2' <- eval e2
+        when (e2' == 0) $ throwError $ Plain DivByZeroError
+        pure $ e1' `div` e2'
+```
+
+This is slightly nicer at the cost of having to write `WithContext String Error` in
+your constraint, and throw `Plain` errors when you aren't adding contexts. 
+
+If we actually wanted to make this a library we could improve things even more
+by returning a `prettyprinter` `Doc`, or maybe offering Template Haskell splices
+to throw errors tagged with source locations.
