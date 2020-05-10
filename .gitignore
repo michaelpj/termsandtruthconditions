@@ -3,3 +3,4 @@ _site
 .bundle
 result
 .jekyll-metadata
+.jekyll-cache
