@@ -58,6 +58,7 @@ attack (and the chances are you would only say it if you meant it as an attack![
 
 [^robust]:
     Where "robust" means "not pulling any punches, but not aggressive".
+
 [^humans]:
     The intricacy of human use of implicature is amazing. Sometimes I
     know that in the current context, if I say X it would be interpreted as Y,
