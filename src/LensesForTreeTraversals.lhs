@@ -1,1 +1,1 @@
-../_drafts/lenses-for-tree-traversals.md
+../_posts/2020-08-02-lenses-for-tree-traversals.md

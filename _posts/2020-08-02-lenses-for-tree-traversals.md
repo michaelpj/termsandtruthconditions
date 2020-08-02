@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Lenses for Tree Traversals
-tags: [programming]
+tags:
+- programming
+date: 2020-08-02 22:05 +0100
 ---
-
-
 If there's one thing compiler writers spill a lot of ink over, it's tree traversals.
 Tree traversals are infuriatingly simple conceptually, but can be a lot of boilerplate to actually write.
 This post covers a couple of tricks that I've found useful recently using tools from `lens`.
