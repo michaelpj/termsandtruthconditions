@@ -1,29 +1,17 @@
-{ pkgs ? (import <nixpkgs> {}), stdenv ? pkgs.stdenv, bundlerEnv ? pkgs.bundlerEnv, ruby ? pkgs.ruby, lib ? pkgs.lib }:
-
-let 
-  name = "terms-and-truth-conditions";
-  env = bundlerEnv {
-    inherit name;
-    inherit ruby;
-    gemfile = ./Gemfile;
-    lockfile = ./Gemfile.lock;
-    gemset = ./gemset.nix;
-  };
-in stdenv.mkDerivation {
-  inherit name;
-  src = builtins.filterSource 
+{ pkgs ? import <nixpkgs> {} }:
+let src = builtins.filterSource 
     (path: type: 
       let baseName = baseNameOf (toString path); 
       in !(
         # Filter out the site dir
         (type == "directory" && baseName == "_site")
+        # And dist-newstyle
+        ||
+        (type == "directory" && baseName == "dist-newstyle")
       )
     ) 
     ./.;
-  buildInputs = [ env ruby ];
-  buildPhase =
-    ''
-      jekyll build -d $out
-    '';
-  dontInstall = true;
+in {
+  blog = pkgs.callPackage ./blog.nix { inherit src; };
+  haskell = pkgs.haskellPackages.callPackage ./haskell.nix { inherit src; };
 }

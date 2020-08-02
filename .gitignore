@@ -4,3 +4,4 @@ _site
 result
 .jekyll-metadata
 .jekyll-cache
+dist-newstyle
