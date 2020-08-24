@@ -225,3 +225,5 @@ countTermNodes2 = cata f where
 
 The normal case is similarly concise, but there's no way to handle the types generically.
 So we have to do the case for `Lam` manually, and we would have to do this for every term with a type in, if we had others.
+
+*RESPONSES*: This [post](https://oleg.fi/gists/posts/2020-08-03-mutually-recursive-traversals.html) by Oleg Grenrus tackles the mutually recursive traversals problem, and this [comment](https://www.reddit.com/r/haskell/comments/i2js6q/lenses_for_tree_traversals/g0eyfvf?utm_source=share&utm_medium=web2x&context=3) by Chris Penner gives an alternative way of doing the recursion.
