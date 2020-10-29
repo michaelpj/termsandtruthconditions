@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Your orphan instances are probably fine
-tags: [ programming , haskell ]
+tags:
+- programming
+- haskell
+date: 2020-10-29 09:56 +0000
 ---
-
 "Orphan" typeclass instances are instance declarations `instance T A` that occur in any module other than 
 1. the module where the class `T` is defined, or 
 2. the module where the type `A` is defined
