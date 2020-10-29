@@ -23,21 +23,19 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1vnxrbhi7cq3p4y2v9iwd10v1c7l15is4var14hwnb2jip4fyjzz";
+      sha256 = "094387x4yasb797mv07cs3g6f08y56virc2rjcpb1k79rzaj3nhl";
       type = "gem";
     };
-    version = "1.1.7";
+    version = "1.1.6";
   };
   em-websocket = {
     dependencies = ["eventmachine" "http_parser.rb"];
-    groups = ["default" "jekyll_plugins"];
-    platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1mg1mx735a0k1l8y14ps2mxdwhi5r01ikydf34b0sp60v66nvbkb";
+      sha256 = "1bsw8vjz0z267j40nhbmrvfz7dvacq4p0pagvyp17jif6mj6v7n3";
       type = "gem";
     };
-    version = "0.5.2";
+    version = "0.5.1";
   };
   eventmachine = {
     source = {
@@ -52,10 +50,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "12lpwaw82bb0rm9f52v1498bpba8aj2l2q359mkwbxsswhpga5af";
+      sha256 = "10lfhahnnc91v63xpvk65apn61pib086zha3z5sp1xk9acfx12h4";
       type = "gem";
     };
-    version = "1.13.1";
+    version = "1.12.2";
   };
   forwardable-extended = {
     source = {
@@ -79,10 +77,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "153sx77p16vawrs4qpkv7qlzf9v5fks4g7xqcj1dwk40i6g7rfzk";
+      sha256 = "0jwrd1l4mxz06iyx6053lr6hz2zy7ah2k3ranfzisvych5q19kwm";
       type = "gem";
     };
-    version = "1.8.5";
+    version = "1.8.2";
   };
   jekyll = {
     dependencies = ["addressable" "colorator" "em-websocket" "i18n" "jekyll-sass-converter" "jekyll-watch" "kramdown" "kramdown-parser-gfm" "liquid" "mercenary" "pathutil" "rouge" "safe_yaml" "terminal-table"];
@@ -90,10 +88,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "192k1ggw99slpqpxb4xamcvcm2pdahgnmygl746hmkrar0i3xa5r";
+      sha256 = "1gw05bh9iidnx2lxw0h5aiknbly818cmndc4a9nhq28fiafizi82";
       type = "gem";
     };
-    version = "4.1.1";
+    version = "4.0.1";
   };
   jekyll-archives = {
     dependencies = ["jekyll"];
@@ -175,10 +173,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "097yhw58dqaqs3j490brsvjq2j4v2ynzg54q37vlbdvpq3snf86m";
+      sha256 = "07c1gb16vih25vlp2sd58y6mcdb9qlgx5gxxblsb47h8r8m3iwdl";
       type = "gem";
     };
-    version = "1.10.2";
+    version = "1.9.1";
   };
   kramdown = {
     dependencies = ["rexml"];
@@ -186,10 +184,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1vmw752c26ny2jwl0npn0gbyqwgz4hdmlpxnsld9qi9xhk5b1qh7";
+      sha256 = "059mk8lmddp2a2aa6s4pp7x2yyqbqg5crx5jkn32dzlnqi2j5cn6";
       type = "gem";
     };
-    version = "2.3.0";
+    version = "2.2.1";
   };
   kramdown-parser-gfm = {
     dependencies = ["kramdown"];
@@ -224,14 +222,12 @@
     version = "3.2.1";
   };
   mercenary = {
-    groups = ["default" "jekyll_plugins"];
-    platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0f2i827w4lmsizrxixsrv2ssa3gk1b7lmqh8brk8ijmdb551wnmj";
+      sha256 = "10la0xw82dh5mqab8bl0dk21zld63cqxb1g16fk8cb39ylc4n21a";
       type = "gem";
     };
-    version = "0.4.0";
+    version = "0.3.6";
   };
   pathutil = {
     dependencies = ["forwardable-extended"];
@@ -249,10 +245,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1xqcgkl7bwws1qrlnmxgh8g4g9m10vg60bhlw40fplninb3ng6d9";
+      sha256 = "0vywld400fzi17cszwrchrzcqys4qm6sshbv73wy5mwcixmrgg7g";
       type = "gem";
     };
-    version = "4.0.6";
+    version = "4.0.5";
   };
   rb-fsevent = {
     groups = ["default" "jekyll_plugins"];
@@ -290,10 +286,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1igl00gk0vaq4xxk44m7yflqdzsblgxlzcxj8saz96bmx7mg7392";
+      sha256 = "1n9h0ls2a2zq0bcsw31wxci1wdxb8s3vglfadxpcs6b04vkf6nqq";
       type = "gem";
     };
-    version = "3.24.0";
+    version = "3.18.0";
   };
   safe_yaml = {
     groups = ["default" "jekyll_plugins"];
@@ -311,10 +307,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0gpqv48xhl8mb8qqhcifcp0pixn206a7imc07g48armklfqa4q2c";
+      sha256 = "1qzfnvb8khvc6w2sn3k91mndc2w50xxx5c84jkr6xdxlmaq1a3kg";
       type = "gem";
     };
-    version = "2.4.0";
+    version = "2.3.0";
   };
   terminal-table = {
     dependencies = ["unicode-display_width"];
