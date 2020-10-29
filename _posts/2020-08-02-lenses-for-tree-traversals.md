@@ -3,6 +3,7 @@ layout: post
 title: Lenses for Tree Traversals
 tags:
 - programming
+- haskell
 date: 2020-08-02 22:05 +0100
 ---
 If there's one thing compiler writers spill a lot of ink over, it's tree traversals.
