@@ -16,6 +16,8 @@ The answer is simple: things take longer than we expect.
 And we *know* that we're uncertain about our estimates when we make them, i.e. there's actually some probability distribution over the time the task will take.
 So why are we *surprised* that things blow out and why don't we have the tools to measure and deal with this?
 
+<!-- more -->
+
 ## Point estimates
 
 I think the answer is that we're working with point estimates. 
