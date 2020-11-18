@@ -3,7 +3,7 @@ title: Consequentialist moral character
 layout: post
 date: 2015-01-26 17:54
 
-tags: [philosophy, ethics, effetive altruism]
+tags: [philosophy, ethics, effective altruism]
 ---
 
 Consequentialist moral theories locate the good in the consequences of our
