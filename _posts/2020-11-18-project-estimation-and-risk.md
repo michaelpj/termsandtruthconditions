@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project estimation, risk, and point estimates
+title: Why doesn't software project management handle risk better?
 tags:
 - notebook
 - programming
