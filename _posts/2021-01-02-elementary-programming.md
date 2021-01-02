@@ -1,8 +1,10 @@
 ---
+layout: post
 title: Elementary programming
-tags: 
-- programming 
+tags:
+- programming
 - haskell
+date: 2021-01-02 18:07 +0000
 ---
 
 What's the difference between this program
