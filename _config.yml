@@ -11,7 +11,7 @@ url: "https://www.michaelpj.com" # the base hostname & protocol for your site
 lang: en-GB
 timezone: Europe/London
 
-# build settings
+#get build settings
 exclude: 
   - default.nix
   - shell.nix
