@@ -1,4 +1,4 @@
-{ src, mkDerivation, base, lens, recursion-schemes, stdenv, markdown-unlit }:
+{ src, mkDerivation, base, lens, recursion-schemes, stdenv, lib, markdown-unlit }:
 mkDerivation {
   pname = "blog";
   version = "0.1.0.0";
@@ -6,5 +6,5 @@ mkDerivation {
   libraryHaskellDepends = [ base lens recursion-schemes ];
   libraryToolDepends = [ markdown-unlit ];
   description = "Blog";
-  license = stdenv.lib.licenses.mit;
+  license = lib.licenses.mit;
 }
