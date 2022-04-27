@@ -10,6 +10,8 @@ If there's one thing compiler writers spill a lot of ink over, it's tree travers
 Tree traversals are infuriatingly simple conceptually, but can be a lot of boilerplate to actually write.
 This post covers a couple of tricks that I've found useful recently using tools from `lens`.
 
+<!-- more -->
+
 Let's suppose we have a simply lambda calculus with some primitive integer operations.
 
 ```haskell

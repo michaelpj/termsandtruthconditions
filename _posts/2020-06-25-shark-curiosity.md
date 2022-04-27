@@ -11,6 +11,8 @@ Taken literally this implies a rather bleak picture (you attack things because t
 But I think that the point is rather that to the shark, biting is not necessarily an aggressive action.
 For curious sharks anyway!
 
+<!-- more -->
+
 ## Collaborative biting
 
 This is intimately related to [collaborative and combative discussions]({% post_url 2015-05-27-collaborative_and_combative_discussions %}).

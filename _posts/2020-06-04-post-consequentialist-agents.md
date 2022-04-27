@@ -14,6 +14,8 @@ This is a prosaic example of an agent modifying themselves to the point at which
 Before immersing himself in his field, John1 primarily pursues money. 
 Afterwards, John2 primarily pursues his startup idea, and is willing to sacrifice other ways to make easy money in order to work on it.
 
+<!-- more -->
+
 Bernard Williams famously argued that consequentialism is self-effacing: as a theory it recommends that an agent *not* act according to it or even believe in it.
 But this is fine, and indeed really a sensible feature of goal-driven system.
 Believing in or acting according to a moral system is a feature of the world, and a such subject to assessment as to whether it furthers our goals.
