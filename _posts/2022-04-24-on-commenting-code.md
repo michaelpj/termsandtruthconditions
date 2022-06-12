@@ -1,6 +1,8 @@
 ---
 layout: post
 title: On Commenting Code
+tags:
+- programming
 date: 2022-04-24 16:16 +0100
 ---
 Programmers like to go on about how you should or should not comment your code.
