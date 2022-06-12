@@ -24,6 +24,7 @@ import Control.Lens
 import Data.Monoid
 import Data.Functor.Foldable hiding (fold)
 import Data.Foldable
+import Data.Fix hiding (cata)
 
 type Name = String
 
