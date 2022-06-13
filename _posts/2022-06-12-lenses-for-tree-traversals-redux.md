@@ -128,7 +128,7 @@ freeVars' = go mempty
       t -> (termSubterms . go bound) f t
 
 -- Thanks to the magic of lens, we can get back our original 
--- traversal -- by composing with a prism for the constructor, 
+-- traversal by composing with a prism for the constructor, 
 -- so we're still able to avoid duplicating the traversal code.
 makePrisms ''Term
 freeVarNames :: Traversal' Term Name
