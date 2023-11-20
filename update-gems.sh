@@ -1,3 +1,7 @@
 #! /usr/bin/env bash
-nix-shell -p bundler --command "bundler update && bundler package --path /tmp/vendor/bundle"
-$(nix-build '<nixpkgs>' -A bundix)/bin/bundix --lockfile=Gemfile.lock
+
+rm -f Gemfile.lock
+rm -f gemset.nix
+
+# See https://github.com/NixOS/nixpkgs/issues/190084
+BUNDLE_FORCE_RUBY_PLATFORM=true nix-shell -p bundler bundix --command "bundler update && bundix -l"

@@ -5,9 +5,10 @@ let
   env = bundlerEnv {
     inherit name;
     inherit ruby;
-    gemfile = ./Gemfile;
-    lockfile = ./Gemfile.lock;
-    gemset = ./gemset.nix;
+    gemdir = ./.;
+    #gemfile = ./Gemfile;
+    #lockfile = ./Gemfile.lock;
+    #gemset = ./gemset.nix;
   };
 in stdenv.mkDerivation {
   inherit name src;
