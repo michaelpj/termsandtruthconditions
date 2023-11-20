@@ -32,6 +32,8 @@ then once we only support GHC 9.2 and above, the conditional will always evaluat
 Until now, we've mostly done this by hand.
 But surely there should be a way to do this automatically!
 
+<!-- more -->
+
 What we want to do is similar to _partial evaluation_: we want to evaluate _some_ of the CPP, given values for _some_ of the inputs, and get as a result a reduced version of our input.
 
 There are several tools that do this:
