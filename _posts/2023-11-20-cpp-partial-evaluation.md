@@ -1,6 +1,6 @@
 ---
 layout: post
-title: cpp-partial-evaluation
+title: Partially evaluating CPP macros in Haskell codebases
 date: 2023-11-20 21:31 +0000
 ---
 The Haskell Language Server (HLS) codebase has a lot of CPP conditionals.
