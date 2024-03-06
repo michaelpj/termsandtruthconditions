@@ -1,13 +1,18 @@
 ---
 layout: post
 title: The Second Sex
-tags: [review]
+tags:
+- review
+date: 2024-03-06 09:55 +0000
 ---
+_Note: this is from my drafts. I think I had more to say, but it is sufficiently long since I read the book that I don't remember what it was. Re-reading it I think it holds up okay so I'm publishing it._
 
 This book changed how I think about women, and about feminism.
 
 De Beavoir's analysis of the position of women is a clear, historical meterialist one.
 Women are faced with a cascading series of disadvantages, each of which builds on the previous one, both historically/causally and in the current state.
+
+<!-- more -->
 
 ### 1) Biological: women are "enslaved to the species"
 
@@ -50,7 +55,7 @@ Women too easily buy into the story of their own privilege and value, not notici
 
 Reading the later sections of the book where de Beauvoir talks about the lived experiences of women in diverse situations and the ways in which their behaviours are rooted in (and often indirectly support) the system that traps them, I can see why de Beauvoir has been accused of secret misogyny.
 She portrays most "normal" women as weak, vain, self-indulgent, indecisive, un-serious, timid, and easily distracted by the irrelevant.
-It would be easy to say she just doesn't like women, but I think what she really hates is *femininity*.
+It would be easy to say she just doesn't like women, but I think what she really hates is *femininity* (and I think it's true to say that she thinks femininity is _worse_ than masculinity).
 
 For de Beauvoir, femininity is a *cage*.
 There is nothing distinctively valuable about what our society considers femininity, it is more like a set of psychological disabilities inflicted on women.
@@ -73,28 +78,42 @@ Of course, social struggle is required on top of this, but it likely will not su
 Women got the vote because they worked; they worked because the nature of work had changed so they could do it.
 Sexual liberation followed birth control; not the other way around.
 
-The prescription there is obvious: keep hacking away at the roots of the tree.
-We will not be done until we have got rid of *all* of it: no privilege for strength; total control over pregnancy; external gestation of children; communal (or at least ferociously equal) childrearing; control of menstruation.
+The prescription is obvious: keep hacking away at the roots of the problem.
+We will not be done until we have got rid of *all* of it: no privilege for strength[^guns]; total control over pregnancy; external gestation of children; communal (or at least ferociously equal) childrearing; control of menstruation.
 If we do this, then in the long run society will be forced to adjust to accommodate freer, more powerful women.
 Of course in practice that will not simply happen: there will be plenty of struggle to get there.
 
+[^guns]: Random speculation: what would de Beauvoir have thought about gun rights? "God made men and women, Sam Colt made them equal".
+
 ## Reflections
 
-I think my instincts are with de Beauvoir.
+I think my instincts are with de Beauvoir.[^second-wave]
+
+[^second-wave]: Reading this book also really helped me place myself in orientation to other feminist thought: it turns out I resonate a lot with second-wave feminism.
 
 As a species we are always in conflict with nature: we do not want to eat what we are supposed to; mate like we're supposed to; live or die like we're supposed to.
 Nature is not our friend, and the burdens it puts on us ramify up through our society. 
 We need to hack away at the roots, or we're going to struggle to fight against their pull.
 
-I'm also suspicious of attempts to embrace a femininity that rejects "masculine" qualities that are actually useful.
+Perhaps this is a nerd thing: the materialist idea that we can fix our social problems by solving material problems (e.g. believing that external gestation technology would lead to reduced career impact on women from pregnancy) is an instance of the oft-criticised idea of "technical solutions to social problems".
+But in this instance I think it's pretty plausible.
+If a social problem has material roots then we _should_ expect that technical or economic changes to the roots should affect the problem![^materialist]
+
+[^materialist]: I certianly wouldn't say I'm a materialist in the sense of thinking that _all_ social problems have material roots, though.
+
+I'm also suspicious of a feminism that rejects "masculine" qualities that are actually useful.
 For example, every now and I again I read something that suggests that we should reject "reason" entirely, since it's a masculine way at looking at the world.
 Which just seems crazy to me: it's a useful tool, why would you reject it?
 
-This is by no means an endorsement of modern masculinity as a whole, though.
-There's plenty wrong with it - that doesn't mean we shouldn't try to preserve the good bits.
+This is by no means an endorsement of modern masculinity.
+There's plenty wrong with it -- that doesn't mean we shouldn't try to preserve the good bits.
 Throwing the whole thing out is like saying "the people who currently win elections are assholes, therefore we shouldn't try and win elections".
 Bullshit, says de-Beauvoir-in-my-head, take the goddamn power and then worry about not being an asshole!
 
-Similarly, I think there are good qualities in femininity, even if they are often learnt as part of a package of suffering.
-It would be good if many of us were more empathetic; but many women learn to be empathetic as a defense mechanism against dangerous and unpredictable men in their lives.
-So I can believe that "femininity" is basically bad, even if there are good 
+Similarly, I think there are good qualities in femininity, even if they are often learned as part of a package of oppression.
+It would be good if many of us were more empathetic, but many women learn to be empathetic as a defense mechanism against dangerous and unpredictable men in their lives.
+So I can believe that "femininity" is basically bad, even if there are good aspects -- much like masculinity.
+
+I am generally still confused about gender. 
+I think my utopian future would have some kind of gender syncretism based on the positive parts of everything, perhaps with some well-known clusters for people who like to focus on particular bits.
+But that's only going to work once you get rid of the material pressures.
