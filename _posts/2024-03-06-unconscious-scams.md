@@ -3,10 +3,13 @@ layout: post
 title: The unconscious scammer
 date: 2024-03-06 09:22 +0000
 ---
+
 If you spend enough time in risk-tolerant places (e.g. startups, blockchain) you start to notice a particular pattern.
 A charismatic founder, call them Alice, starts a new project.
 The project seems to be transparently stupid or bullshit, but somehow they manage to secure a lot of funding and/or users.
 After a while, the project fails, probably after providing no value to anyone... but Alice comes out of it well, having cashed out through high salary or selling lots of stock/tokens/whatever.
+
+<!-- more -->
 
 There's a variant of this which is just fraud: if Bob starts a project and raises money _while believing that the project is bullshit_ then that's just a scam.
 There is intent to deceive people out of their money.
