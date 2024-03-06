@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The architecture of a language server: non-language-specific parts
+title: "The architecture of a language server: non-language-specific parts"
 ---
 
 I have been thinking a bunch about how to architect a language server.
