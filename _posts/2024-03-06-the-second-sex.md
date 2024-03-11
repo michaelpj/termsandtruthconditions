@@ -3,6 +3,7 @@ layout: post
 title: The Second Sex
 tags:
 - review
+- gender
 date: 2024-03-06 09:55 +0000
 ---
 _Note: this is from my drafts. I think I had more to say, but it is sufficiently long since I read the book that I don't remember what it was. Re-reading it I think it holds up okay so I'm publishing it._
