@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts about defunctionalization
+title: Why is defunctionalization good?
 tags:
 - haskell
 - programming
