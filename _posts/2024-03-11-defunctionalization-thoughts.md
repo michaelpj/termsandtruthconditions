@@ -134,6 +134,8 @@ Humans and computers are no different here: classifying what the continuation ca
 
 ## Scott-encoding is the refunctionalization
 
+_EDIT: Jimmy Koppel kindly pointed out to me [on Twitter](https://x.com/jimmykoppel/status/1767638628069711931?s=20) that this is completely wrong. I am now confused again!_
+
 This is more just drawing attention to something that I think is very cool.
 The inverse of defunctionalization is refunctionalization, and this is exactly Scott-encoding.[^def-at-work]
 I think this makes defunctionalization seem less like a weird trick and more like an example of a fundamental correspondance of relationship between datatypes and fucntions.
