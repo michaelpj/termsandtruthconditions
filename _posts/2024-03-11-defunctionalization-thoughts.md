@@ -43,7 +43,7 @@ sum xs = sum' xs (\x -> x)
 The function is now tail-recursive, so we don't use any stack.
 Instead, we build up a series of _continuations_ (on the heap).
 Each continuation is represented at runtime as a _closure_ containing the `x + <result>` computation that is waiting to be applied; or is the one representing that we are done.
-Each continuation except the final one also has a pointer to the next continuation in its environment (the `y`) variable, and will use that to jump to the next continuation when it is finished.
+Each continuation except the final one also has a pointer to the next continuation in its environment (the `y` variable), and will use that to jump to the next continuation when it is finished.
 
 Now we defunctionalize the continuation (3):
 
