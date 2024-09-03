@@ -1,8 +1,8 @@
 ---
 layout: post
-title: LSP, the good, the bad, and the ugly
+title: 'LSP: the good, the bad, and the ugly'
+date: 2024-09-03 23:58 +0100
 ---
-
 For a few years now I have been working on the [Haskell Language Server](https://github.com/haskell/haskell-language-server) (HLS), and the [`lsp` library](https://github.com/haskell/lsp) for the LSP protocol and writing LSP servers. 
 Unsurprisingly, I have developed some opinions about the design of the LSP! 
 
@@ -10,10 +10,15 @@ Recently I gave a talk about HLS and LSP at the Haskell Ecosystem Workshop at Zu
 One slide featured a hastily-written table of "LSP: the good, the bad, and the ugly".
 As I gave the talk I realised that there was plenty to say on that topic, hence this post.
 
+Most of what I have to say is about the _architecture_ or design of the protocol.
+I won't have much to say about the _features_ that the protocol supports.
+Other people probably have a lot to say about that (e.g the folks working on languages that use heavy editor integration, like interactive theorem provers).
+My perspective here is from my time _implementing_ LSP servers, rather than my time using them.
+
 I will repeat this a few times, but I want to be very clear that LSP is great and I am very happy that it exists.
 While this is going to be a mostly critical post, it is criticism that exists in the context of me being happy to be working on editor tooling that is going to Just Work for a wide spectrum of users!
 
-I want to also mention the excellent [LSP could have been better](https://matklad.github.io/2023/10/12/lsp-could-have-been-better.html), which is the best critical post I've read on LSP, and inspired several of the points I'm going to make.
+Finally, I want to also mention the excellent post [LSP could have been better](https://matklad.github.io/2023/10/12/lsp-could-have-been-better.html), which is the best critical writing that I've read on LSP, and which inspired several of the points I'm going to make.
 
 <!-- more -->
 
@@ -24,19 +29,20 @@ I want to also mention the excellent [LSP could have been better](https://matkla
 The most important things about the LSP are:
 1. It exists
 2. It is omnipresent
-3. It works well enough 
+3. It has a decent feature set
+4. It works well enough 
 
 That is, it actually succeeds in significantly addressing the problem of providing IDE tooling to a wide variety of editors at much lower cost to tooling developers.
 This is huge, and not to be under-appreciated!
-It now seems awful to remember the situation even a few years ago, where most open-source editors had poor and inconsistent support for most programming languages.
+It is now awful to remember the situation even a few years ago, where most open-source editors had poor and inconsistent support for most programming languages.
 Now someone can write a new editor and, with a bit of work on a LSP client, come out with best-in-class programming language support.
 Amazing!
 
 ## Focus on presentation over semantics
 
-As [Alex says](https://matklad.github.io/2023/10/12/lsp-could-have-been-better.html#Focus-on-Presentation) it's a great choice for the LSP to focus on presentation, i.e. the things that actually appear in the editor, rather than the semantic structure of the program (which is wildly different from language to language).
+As [Alex says](https://matklad.github.io/2023/10/12/lsp-could-have-been-better.html#Focus-on-Presentation), it's a great choice for the LSP to focus on presentation, i.e. the things that actually appear in the editor, rather than the semantic structure of the program (which is wildly different from language to language).
 
-This works pretty well, although some semantic elements have crept in over time.
+The presentation-first approach works pretty well, although some semantic elements have crept in over time.
 For example:
 - There is a "type hierarchy" request. Is this just a widget that represents a tree of arbitrary stuff that you can consider "types"? Or is there some implication that the relationship that the tree shows should be _subtyping_, making it a bit more specific to languages with inheritance? Unclear.
 - There are various tags that indicate the nature of entries in e.g. completion lists, and these are usually semantic rather than presentational. For example, a completion item is tagged as _deprecated_, rather than being tagged as _non-emphasized_ or similar.
@@ -80,7 +86,7 @@ The Haskell implementation of the protocol, which I maintain, used to have all o
 This was awful, tedious, and error-prone (especially given the [weirdness of the types](#weird-types)).
 It took me quite a long time, but this is now all generated, which has removed 90% of the toil from maintaining that library, and nearly eliminated bugs relating to the JSON serialization of types.[^nearly]
 
-[^nearly]: It's "nearly" because while I think _we_ now get it right, plenty of clients get it wrong occasionally. People are particularly fond of just sending `null` occasionally instead of an empty list or an optional field which is actually non-nullable. Thanks Javascript.
+[^nearly]: It's "nearly" because while I think _we_ now get it right, plenty of clients get it wrong occasionally. People are particularly fond of just sending `null` occasionally instead of an empty list or an optional field which is actually non-nullable. Thanks Javascript!
 
 ## Dynamic registration
 
@@ -110,7 +116,7 @@ There have been many small contributions by outsiders, but nobody else has commi
 
 Major changes to the spec are driven by internal forces inside Microsoft.
 For example, the latest version of the spec adds a bunch of new content for supporting notebooks.
-That doesn't look to me like something the community was particularly asking for, but I guess some PM inside Microsoft decided they wanted VSCode to support it, so now it's in the spec.
+That doesn't look to me like something the community was particularly asking for, but I guess some PM inside Microsoft decided they wanted VSCode to support notebooks, so now it's in the spec.
 
 There is zero open discussion of features before they are added to the spec.
 Typically they are implemented in VSCode, and then the specification is updated as a _fait accompli_ to document those changes.
@@ -121,8 +127,8 @@ There is not even a [community space for implementers of language servers](https
 
 Another consequence of the lack of openness     is that there is no forum for agreeing on extensions to the somewhat arbitrary enumerations that the LSP specification has for things like symbol types.
 In _theory_ the client and the server can agree on what types they support, and then use those.
-But in practice the way it ususally works is that there is a well known set of identifiers that is agreed upon outside the main specification process.
-What happens in the LSP world is that we have no way of agreeing at all, so in practice the set of types that get used are exactly the ones that are in the spec.
+But the way it ususally works with other standards is that there is a well known set of identifiers that is agreed upon outside the main specification process.
+What happens in the LSP world is that we have no way of agreeing at all, so in practice the set of symbol types that gets used are exactly the ones that are in the spec.
 
 This is not really good enough for such an important project, in my opinion.
 The LSP should be an open standard, like HTTP, with an open committee that represents the large community which is invested in LSP, and can offer their insight in how to evolve it.
@@ -131,9 +137,9 @@ The LSP should be an open standard, like HTTP, with an open committee that repre
 
 Here's what the specification has to say about concurrency:
 
-> Responses to requests should be sent in roughly the same order as the requests appear on the server or client side. So for example if a server receives a `textDocument/completion` request and then a `textDocument/signatureHelp` request it will usually first return the response for the `textDocument/completion` and then the response for `textDocument/signatureHelp`.
+> Responses to requests should be sent in roughly the same order as the requests appear on the server or client side. ...
 >
-> However, the server may decide to use a parallel execution strategy and may wish to return responses in a different order than the requests were received. The server may do so as long as this reordering doesn’t affect the correctness of the responses. For example, reordering the result of `textDocument/completion` and `textDocument/signatureHelp` is allowed, as each of these requests usually won’t affect the output of the other. On the other hand, the server most likely should not reorder `textDocument/definition` and `textDocument/rename` requests, since executing the latter may affect the result of the former.
+> However, the server may decide to use a parallel execution strategy and may wish to return responses in a different order than the requests were received. The server may do so as long as this reordering doesn’t affect the correctness of the responses. ...
 
 This pretty much amounts to "yeah, you'll want to use concurrency, but if something weird happens that's your problem".
 That's a pretty disappointing attitude.
@@ -143,7 +149,7 @@ In particular, it's somewhat disingenuous to suggest that concurrent server proc
 For example:
 
 - Requests cannot be cancelled unless the server can handle the cancellation request concurrently with processing the original request.
-- Progress tracking cannot work unless the server can send notifications (_and_ in the case of `window/workDoneProgress`, send and handle responses to requests!) concurrently wit  h processing a request.
+- Progress tracking cannot work unless the server can send notifications (_and_ in the case of `window/workDoneProgress`, send and handle responses to requests!) concurrently with processing a request.
 
 [^concurrency]: I attempted to articulate a slightly more complete version of this [here](https://github.com/haskell/lsp/issues/538#issuecomment-1875696174).
 
@@ -153,8 +159,8 @@ As [Alex points out](https://matklad.github.io/2023/10/12/lsp-could-have-been-be
 In particular, both failure and asynchronous processing lead to situations where we may not be sure of the ordering of events.
 
 Consider:
-1. The client sends the server a document change notification for document D
-2. The server updates its internal state (e.g. compilation results) to account for the change to D
+1. The client sends the server a document change notification for document D.
+2. The server updates its internal state (e.g. compilation results) to account for the change to D.
 3. The client requests code actions for D, and the server responds.
 
 The question is: when does 2 happen in relation to 3?
@@ -163,7 +169,7 @@ The question is: when does 2 happen in relation to 3?
 
 So the client really has no idea whether or not the results it is getting are up-to-date or not.
 This matters _most_ for applying text edits, which we will discuss shortly, but it's a general problem.
-Contra Alex, I don't think it's enough to just avoid throwing away the causality that you get from message sequencing.
+Contra Alex, I don't think it's enough to just avoid retain the causality that you get from message sequencing.
 If we expect the server to process requests asynchronously, then we are inevitably going to lose this ordering, and we need something stronger.
 
 ## State synchronization
@@ -225,7 +231,7 @@ Both methods have advantages and disadvantages:
     - Consumer must take responsibility for ensuring they are up to date
     - Producer may need to compute updates for the client at any time
   
-Over time the LSP spec has moved towards having the client be in control (i.e. push state to the server, pull state from the server).[^exceptions]
+Over time the LSP spec has moved towards having the client be in control (i.e. _push_ client state _to_ the server, _pull_ server state _from_ the server).[^exceptions]
 But in general it makes sense to use either method for any given kind of state.
 
 [^exceptions]: The exceptions, for some reason, are configuration and progress, which are pulled-from-server, pushed-to-client respectively. I don't really know why.
@@ -260,7 +266,6 @@ Okay, that was a lot of dimensions to consider! There are a whole bunch of probl
     - In the JSON-RPC world we need a bunch of requests for each feature in order to handle the different things we want to do.
     - Semantic tokens needs 4!
 1. Dependency tracking is ad-hoc or unimplemented. 
-    - This is an extended version of the [causality](#missing-causality) problem. 
     - With a few exceptions (text document versions), information about state dependencies is lost.
 
 The other lesson is that the problem is quite complex.
@@ -269,6 +274,7 @@ As usual, I don't fault the LSP designers here: the complexity clearly emerged o
 But with the benefit of hindsight, I think we could do better.
 
 Specifically, I think we could have a _generic_ state synchronization protocol as part of the LSP that would allow synchronizing many different kinds of state, and support _all_ of the operations listed above.
+Then server and client implementers could implement it once, and use it for everything.
 While I'm not an expert and I wouldn't want to have to draft such a thing myself[^lies], state synchronization is a well-studied problem in the academic literature, so we should be able to benefit from a lot of prior art.
 
 [^lies]: That's a complete lie, I would love to, it sounds fun.
@@ -373,11 +379,13 @@ I don't have much to add: UTF-16 was a bad choice driven by Windows, it should j
 
 ## Impoverished interaction model
 
-If you want to go outside what the LSP has built in, then you pretty much have to do it by offering code actions, or something similar.
+If you want to go outside what the LSP has built in, then you pretty much have to do it by offering code actions.[^custom-methods]
 But the interaction model for code actions is very basic: the user triggers them, and then they do something.
 In particular, you can't really do the kind of multi-step operations that we're used to from fancy IDEs in the past, or even something as basic as telling the user what you're going to do and asking them to confirm before doing it.
 
 Even the built-in refactorings have pretty simplistic interaction models, as [Alex points out](https://matklad.github.io/2023/10/12/lsp-could-have-been-better.html#Simplistic-Refactorings).
+
+[^custom-methods]: Or you can implement custom methods, but then you're back to the bad old days of needing special code in every client to support your extension. No, no, no!
 
 ## JSON-RPC
 
@@ -393,9 +401,9 @@ It wouldn't be my choice but I don't hate it that much.
 
 # LSP 2.0?
 
-Realistically, most of the complaints I have are problems for developers of language servers and clients, which is a comparatively small population compared to the number of people who use those tools.
-So it is unlikely to really be a good idea to do a big re-engineering of the protocol to make it easier for implementers... and doing so would make things harder for those people in the short term as there would be a new protocol to implement.
-Hence I don't hold out much hope for a big LSP 2.0.
+Realistically, most of the complaints I have are problems for developers of language servers and clients, which is a comparatively small population compared to the number of people who _use_ those tools.
+So I don't think it's really a good idea to do a big re-engineering of the protocol _just_ to make it easier for implementers... and even if we did, a big new protocol version would make things harder for implementers in the short term!
+Hence I don't think there's a good case for a big LSP 2.0, unless it came bundled with some significant improvements for users.
 
-What I _would_ like is for the spec to transition to a truly open model.
+What I _would_ like is for the LSP to transition to a truly open model.
 I have no idea how that would come about and I don't have the zeal to pursue it, but if it's something you're interested in, maybe drop me a line.
