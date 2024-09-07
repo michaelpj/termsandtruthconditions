@@ -3,6 +3,7 @@ layout: post
 title: 'LSP: the good, the bad, and the ugly'
 date: 2024-09-03 23:58 +0100
 ---
+
 For a few years now I have been working on the [Haskell Language Server](https://github.com/haskell/haskell-language-server) (HLS), and the [`lsp` library](https://github.com/haskell/lsp) for the LSP protocol and writing LSP servers. 
 Unsurprisingly, I have developed some opinions about the design of the LSP! 
 
@@ -407,3 +408,5 @@ Hence I don't think there's a good case for a big LSP 2.0, unless it came bundle
 
 What I _would_ like is for the LSP to transition to a truly open model.
 I have no idea how that would come about and I don't have the zeal to pursue it, but if it's something you're interested in, maybe drop me a line.
+
+_See discussion on [Hacker News](https://news.ycombinator.com/item?id=41440275#41470423)_
